@@ -15,9 +15,11 @@ Este tem como objeto explicar de maneira direta como são os fluxos e processo n
 
 | Sigla |Significado |Descrição |
 |:--- |:---------- |:------------ |
+|AST | - | Abreviação para centralizador de âmbito evoluitivo |
 |BC|Business Consulting | ~~Find Clarity in Chaos~~ ABAP, Desenvolvedor SAP, Consultor ABAP, SAP DEV|
 |GA|Gestão de Ativos|-|
-|tcode |Transação SAP | _Transaction code_ de forma abrevia |
+|INC|Incidentes| Abreviação para centralizador de âmbito corretivo |
+|TCODE |Transação SAP | _Transaction code_ de forma abrevia |
 |.|.|.|
 
 
@@ -34,3 +36,9 @@ Para acessar a solução deves user a tcode `ZCA_QUERMESSE_BC`. É possivel faze
 ```
 
 ### Visão de atendimento BC
+A descrição contempla o fluxo dos passos que um `BC` deve atender para seguir a resolução de um INC na Quermesse. 
+
+#### Boas praticas para seguir
+Dentre as descrições do processo em si, algumas regras devem ser seguidas para que o fluxo ocorra como esperado durantes os atendimentos, segue abaixo:
+- INC terá que estar inserido corretamente na Quermesse para se iniciar desenvolvimento/analise
+- O Status deve ser alterado de acordo com a evolução do INC
