@@ -17,6 +17,7 @@ Este tem como objeto explicar de maneira direta como são os fluxos e processo n
 |:--- |:---------- |:------------ |
 |BC|Business Consulting | ~~Find Clarity in Chaos~~ ABAP, Desenvolvedor SAP, Consultor ABAP, SAP DEV|
 |GA|Gestão de Ativos|-|
+|tcode |Transação SAP | _Transaction code_ de forma abrevia |
 |.|.|.|
 
 
@@ -24,4 +25,4 @@ Este tem como objeto explicar de maneira direta como são os fluxos e processo n
 Quermesse é um sistema criado e mantido pelo time de `BC` da **EDP JUMP GA** que tem como finalidade gerir os *Incidentes* que foram criados no sistema Service-Now e que exigem a atuação do time de `BC` para análises, melhorias e outros.
 
 # Transação e filtro
-Para acessar a 
+Para acessar a solução deves user a tcode 
