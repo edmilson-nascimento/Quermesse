@@ -32,6 +32,8 @@ Para acessar a solução deves user a tcode `ZCA_QUERMESSE_BC`. É possivel faze
 
 ## Visão geral
 
+Itens que foram criados no Service-Now para atendimento do time de Jump GA, podem ou não ser adicionados no sistema Quermesse. Isso depende se esse tema necessita de apoio tecnico, seja para analise ou pontos de correção. Apos analise do recurso funcional (que é responsavel por inserir o item na Quermesse), isso é definido.
+
 ```mermaid
 
 %%{ init: { 'flowchart': { 'curve': 'basis' } } }%%
