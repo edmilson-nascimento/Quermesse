@@ -9,7 +9,7 @@
 
 Este tem como objeto explicar de maneira direta como são os fluxos e processo no atendimento de *incidentes* pelo time de `BC` da **EDP JUMP GA**.
 
-# Glossário
+## Glossário
 É bem comum a utilização de sigla e aqui temos algumas para facilitar o entendimento dos processos/fluxos que são abordados para atendimentos de INC. A descrição abaixo é uma representação particular do cenário abordado e não contempla os termos de forma abrigida e/ou aplicada em outros cenarios/times/escopos.
 
 
@@ -21,8 +21,16 @@ Este tem como objeto explicar de maneira direta como são os fluxos e processo n
 |.|.|.|
 
 
-# O que é Quermesse?
+## O que é Quermesse?
 Quermesse é um sistema criado e mantido pelo time de `BC` da **EDP JUMP GA** que tem como finalidade gerir os *Incidentes* que foram criados no sistema Service-Now e que exigem a atuação do time de `BC` para análises, melhorias e outros.
 
-# Transação e filtro
+## Transação e filtro
 Para acessar a solução deves user a tcode `ZCA_QUERMESSE_BC`. É possivel fazer filtro por Status, `BC`que esta atender, Tickets abertos e outros. Por padrão, o filtro inicial esta para que sejam listados os itens que não tem `BC` atribuido e que estão em aberto. Dessa forma tem de forma direto uma lista do que esta disponivel para atendimento no momento.
+
+## Visão geral
+
+```mermaid
+
+```
+
+### Visão de atendimento BC
