@@ -82,7 +82,35 @@ avaliarK15      --> End(((" ")))
 
 Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista com descrivos correspondentes.
 
-| Status | Descrição | obs | 
+| Status | Descrição | Observações | 
+| :---------- | :---------- | :---------- | 
+| Criado | Item foi criado na Quermesse | 
+| Atribuido | Quando o item esta direcionado para atendimento | 
+| Em desenvolvimento (BC) | O item esta em atendimento pelo lado do `BC` | 
+| Em Teste (Funcional) | A solução proposta em testes funcionais | 
+| Aguardando Aprovação | Aguardando aprovação do DFCT | Acontece após o sucesso dos testes funcionais | 
+| Case SAP criado | Solução sendo atendimento por _Case SAP_ | - | 
+| Reaberto | - | - | 
+| Cancelado | - | - | 
+| Fechado | - | - | 
+
+Níveis de status (configuração tcode  `OIBS`).
+
+
+
+| Nº do status | Status | Texto Breve | Nº mais baixo | Nº mais elevado |
+|:--:|:---:|:---|:--- |:---|
+| 1 | - | - | - | - |
+| 2 | - | - | - | - |
+| 3 | - | - | - | - |
+| 4 | - | - | - | - |
+| 5 | - | - | - | - |
+| 6 | - | - | - | - |
+| 7 | - | - | - | - |
+| 8 | - | - | - | - |
+| 9 | - | - | - | - |
+
+| Status | Superior |  | 
 | :---------- | :---------- | :---------- | 
 | Criado | Item foi criado na Quermesse | 
 | Atribuido | Quando o item esta direcionado para atendimento | 
