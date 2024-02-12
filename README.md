@@ -38,26 +38,15 @@ Para acessar a solução deves user a tcode `ZCA_QUERMESSE_BC`. É possivel faze
 flowchart TB
 
 Begin((" ")):::startClass --> service-now([Service-Now])
-B --> C([Create jobs by variant]) 
+service-now --> Atendimento-BC(["Necessario atendimento BC?"])
+Atendimento-BC --> Q1{" "}
 
-C --> J1(FLB1N Partidas em Aberto - F)
-C --> J2(FLB1N Atividade FI MM - F)
-C --> J3(FLB3N Partidas em Aberto - CR)
-C --> J4(FLB1N Partidas Lancadas - F)
+Q1 -- Sim --> Quermesse("Adic. na Quermesse") 
+          --> End
 
-J1 --> submitFBL1N("Call FBL1N - Report RFITEMAP")
-J2 --> submitFBL1N
-J3 --> submitFBL3N("Call FBL3N - Report RFITEMGL")
-J4 --> submitFBL3N
+Q1 -- Não -->
 
-submitFBL1N --> alvGetData(["Busca dados gerados pelo ALV"])
-submitFBL3N --> alvGetData
-
-alvGetData --> excelRoutine(["Processa arquivo excel com dados recuperados"])
-
-excelRoutine --> saveFile(["Salva arquivo no servidor"])
-
-saveFile --> End(((" "))):::endClass
+End(((" "))):::endClass
 ```
 
 ### Visão de atendimento BC
@@ -67,3 +56,4 @@ A descrição contempla o fluxo dos passos que um `BC` deve atender para seguir 
 Dentre as descrições do processo em si, algumas regras devem ser seguidas para que o fluxo ocorra como esperado durantes os atendimentos, segue abaixo:
 - INC terá que estar inserido corretamente na Quermesse para se iniciar desenvolvimento/analise
 - O Status deve ser alterado de acordo com a evolução do INC
+- O campo Resolução da Corretiva deve ser atualizado a medida que a solução se desenvolve (analise/testes/etc)
