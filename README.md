@@ -74,7 +74,7 @@ flowchart TB
 start((" "))    --> verifFuncional([Verif. funcional responsável])
 verifFuncional  --> verifCenarios([Verificar cenários de testes])
 
-    verifCenarios   --> existTestK15(3. Existem testes em k15?)
+    verifCenarios   --> existTestK15(Existem testes em k15?)
     existTestK15    --  Não --> solicitarK15(Solicicitar cenários)
 
     solicitarK15    --> End
