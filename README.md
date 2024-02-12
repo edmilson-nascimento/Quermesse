@@ -81,9 +81,19 @@ avaliarK15      --> End(((" ")))
 
 Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista com descrivos correspondentes.
 
-| Status | Descrição | Observações | 
-| :---------- | :---------- | :--------------- |
-| Criado | Item foi criado na Quermesse | - |
+| Status | Descrição | 
+| :---------- | :---------- | 
+| Criado | Item foi criado na Quermesse | 
+| Atribuido | Quando o item esta direcionado para atendimento | 
+| Em desenvolvimento (BC) | O item esta em atendimento pelo lado do `BC` | 
+
+
+Em Teste (Funcional)
+Aguardando Aprovação
+Case SAP criado
+Reaberto
+Cancelado
+Fechado
 
 ```mermaid
 flowchart TB
