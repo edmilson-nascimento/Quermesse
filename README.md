@@ -91,7 +91,6 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 | Status | Descrição | Observações | 
 | :---------- | :---------- | :--------------- |
 | Criado | Item foi criado na Quermesse | - |
-| Criado | Item foi criado na Quermesse | - |
 
 ```mermaid
 ---
