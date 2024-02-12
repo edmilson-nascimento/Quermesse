@@ -17,6 +17,7 @@ Este tem como objeto explicar de maneira direta como são os fluxos e processo n
 |:--- |:---------- |:------------ |
 |AST | - | Abreviação para centralizador de âmbito evoluitivo |
 |BC|Business Consulting | ~~Find Clarity in Chaos~~ ABAP, Desenvolvedor SAP, Consultor ABAP, SAP DEV|
+|FF | Firefighter | Perfil para acesso em Ambiente Produtivo com finalidades de análise e processamento |
 |GA|Gestão de Ativos|-|
 |INC|Incidentes| Abreviação para centralizador de âmbito corretivo |
 |TCODE |Transação SAP | _Transaction code_ de forma abrevia |
