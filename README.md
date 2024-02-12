@@ -67,26 +67,50 @@ Dentre as descrições do processo em si, algumas regras devem ser seguidas para
 title: Resolução de incidente
 ---
 
-flowchart LR
+flowchart TB
 %% flowchart TB
 %% flowchart LR
 
-    start(start)    --> verifFuncional[1. Verificar responsável]
-    verifFuncional  --> verifCenarios(2. Verificar cenários de testes)
+start((" "))    --> verifFuncional([Verif. funcional responsável])
+verifFuncional  --> verifCenarios([Verificar cenários de testes])
 
-    subgraph Cenário
+    verifCenarios   --> existTestK15(3. Existem testes em k15?)
+    existTestK15    --  Não --> solicitarK15(Solicicitar cenários)
 
-    end
+    solicitarK15    --> End
+    existTestK15--  Sim --> avaliarK15(Análise em K15)
 
-    subgraph Testes Ambiente K15
-        verifCenarios   --> existTestK15(3. Existem testes em k15?)
-        existTestK15    --  Não --> solicitarK15(Solicicitar cenários)
-    end
-        solicitarK15 --> fim
-        existTestK15    --  Sim --> avaliarK15(Verificar erro em Ambiente K15)
-
-    avaliarK15      --> fim(((fim)))
+avaliarK15      --> End(((" ")))
 
 ```
 
 ####
+
+Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista com descrivos correspondentes.
+
+| Status | Descrição | Observações | 
+| :---------- | :---------- | :--------------- |
+| Criado | Item foi criado na Quermesse | - |
+| Criado | Item foi criado na Quermesse | - |
+
+```mermaid
+---
+title: Fluxo do Status
+---
+
+flowchart TB
+%% flowchart TB
+%% flowchart LR
+
+start((" "))    --> verifFuncional([Verif. funcional responsável])
+verifFuncional  --> verifCenarios([Verificar cenários de testes])
+
+    verifCenarios   --> existTestK15(3. Existem testes em k15?)
+    existTestK15    --  Não --> solicitarK15(Solicicitar cenários)
+
+    solicitarK15    --> End
+    existTestK15--  Sim --> avaliarK15(Análise em K15)
+
+avaliarK15      --> End(((" ")))
+
+```
