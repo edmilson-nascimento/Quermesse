@@ -7,4 +7,21 @@
 
 
 
- Fluxos de processos da Quermesse
+Este tem como objeto explicar de maneira direta como são os fluxos e processo no atendimento de *incidentes* pelo time de `BC` da **EDP JUMP GA**.
+
+# Glossário
+É bem comum a utilização de sigla e aqui temos algumas para facilitar o entendimento dos processos/fluxos que são abordados para atendimentos de INC. A descrição abaixo é uma representação particular do cenário abordado e não contempla os termos de forma abrigida e/ou aplicada em outros cenarios/times/escopos.
+
+
+| Sigla |Significado |Descrição |
+|:--- |:---------- |:------------ |
+|BC|Business Consulting | ~~Find Clarity in Chaos~~ ABAP, Desenvolvedor SAP, Consultor ABAP, SAP DEV|
+|GA|Gestão de Ativos|-|
+|.|.|.|
+
+
+# O que é Quermesse?
+Quermesse é um sistema criado e mantido pelo time de `BC` da **EDP JUMP GA** que tem como finalidade gerir os *Incidentes* que foram criados no sistema Service-Now e que exigem a atuação do time de `BC` para análises, melhorias e outros.
+
+# Transação e filtro
+Para acessar a 
