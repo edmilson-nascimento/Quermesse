@@ -14,14 +14,15 @@ Este tem como objeto explicar de maneira direta como são os fluxos e processo n
 
 
 | Sigla |Significado |Descrição |
-|:--- |:---------- |:------------ |
-|AST | - | Abreviação para centralizador de âmbito evoluitivo |
-|BC|Business Consulting | ~~Find Clarity in Chaos~~ ABAP, Desenvolvedor SAP, Consultor ABAP, SAP DEV|
-|FF | Firefighter | Perfil para acesso em Ambiente Produtivo com finalidades de análise e processamento |
-|GA|Gestão de Ativos|-|
-|INC|Incidentes| Abreviação para centralizador de âmbito corretivo |
-|TCODE |Transação SAP | _Transaction code_ de forma abrevia |
-|Service-Now |Sistema de serviços EDP | Sistema interno da EDP usado para gestão de ticket/chamados |
+| :--- |:---------- |:------------ |
+| AST | - | Abreviação para centralizador de âmbito evoluitivo |
+| BC|Business Consulting | ~~Find Clarity in Chaos~~ ABAP, Desenvolvedor SAP, Consultor ABAP, SAP DEV|
+| DFCT |Corrective Change | - |
+| FF | Firefighter | Perfil para acesso em Ambiente Produtivo com finalidades de análise e processamento |
+| GA|Gestão de Ativos|-|
+| INC|Incidentes| Abreviação para centralizador de âmbito corretivo |
+| TCODE |Transação SAP | _Transaction code_ de forma abrevia |
+| Service-Now |Sistema de serviços EDP | Sistema interno da EDP usado para gestão de ticket/chamados |
 |.|.|.|
 
 
@@ -87,7 +88,7 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 | Atribuido | Quando o item esta direcionado para atendimento | 
 | Em desenvolvimento (BC) | O item esta em atendimento pelo lado do `BC` | 
 | Em Teste (Funcional) | A solução proposta em testes funcionais | 
-| Aguardando Aprovação | A solução proposta em testes funcionais | 
+| Aguardando Aprovação | Aguardando aprovação do DFCT | Acontece | 
 
 
 
