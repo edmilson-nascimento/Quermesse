@@ -20,6 +20,7 @@ Este tem como objeto explicar de maneira direta como são os fluxos e processo n
 |GA|Gestão de Ativos|-|
 |INC|Incidentes| Abreviação para centralizador de âmbito corretivo |
 |TCODE |Transação SAP | _Transaction code_ de forma abrevia |
+|Service-Now |Sistema de serviços EDP | Sistema interno da EDP usado para gestão de ticket/chamados |
 |.|.|.|
 
 
@@ -33,6 +34,30 @@ Para acessar a solução deves user a tcode `ZCA_QUERMESSE_BC`. É possivel faze
 
 ```mermaid
 
+%%{ init: { 'flowchart': { 'curve': 'basis' } } }%%
+flowchart TB
+
+Begin((" ")):::startClass --> service-now([Service-Now])
+B --> C([Create jobs by variant]) 
+
+C --> J1(FLB1N Partidas em Aberto - F)
+C --> J2(FLB1N Atividade FI MM - F)
+C --> J3(FLB3N Partidas em Aberto - CR)
+C --> J4(FLB1N Partidas Lancadas - F)
+
+J1 --> submitFBL1N("Call FBL1N - Report RFITEMAP")
+J2 --> submitFBL1N
+J3 --> submitFBL3N("Call FBL3N - Report RFITEMGL")
+J4 --> submitFBL3N
+
+submitFBL1N --> alvGetData(["Busca dados gerados pelo ALV"])
+submitFBL3N --> alvGetData
+
+alvGetData --> excelRoutine(["Processa arquivo excel com dados recuperados"])
+
+excelRoutine --> saveFile(["Salva arquivo no servidor"])
+
+saveFile --> End(((" "))):::endClass
 ```
 
 ### Visão de atendimento BC
