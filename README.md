@@ -60,9 +60,12 @@ Dentre as descrições do processo em si, algumas regras devem ser seguidas para
 - INC deve ser inserido na Quermesse pelo recurso funcional e atualizado pelo recurso `BC`
 - O Status deve ser alterado de acordo com a evolução do INC
 - O campo Resolução da Corretiva deve ser atualizado a medida que a solução se desenvolve (analise/testes/etc)
+.
 
+.
 
 ```mermaid
+
 ---
 title: Resolução de incidente
 ---
@@ -81,10 +84,9 @@ verifFuncional  --> verifCenarios([Verificar cenários de testes])
     existTestK15--  Sim --> avaliarK15(Análise em K15)
 
 avaliarK15      --> End(((" ")))
-
 ```
 
-####
+#### Mais um
 
 Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista com descrivos correspondentes.
 
