@@ -86,10 +86,12 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 | Criado | Item foi criado na Quermesse | 
 | Atribuido | Quando o item esta direcionado para atendimento | 
 | Em desenvolvimento (BC) | O item esta em atendimento pelo lado do `BC` | 
+| Em Teste (Funcional) | A solução proposta em testes funcionais | 
+| Aguardando Aprovação | A solução proposta em testes funcionais | 
 
 
-Em Teste (Funcional)
-Aguardando Aprovação
+
+
 Case SAP criado
 Reaberto
 Cancelado
