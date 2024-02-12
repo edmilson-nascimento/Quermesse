@@ -100,15 +100,28 @@ Níveis de status (configuração tcode  `OIBS`).
 
 | Nº do status | Status | Texto Breve | Nº mais baixo | Nº mais elevado |
 |:--:|:---:|:---|:--- |:---|
-| 1 | - | - | - | - |
-| 2 | - | - | - | - |
-| 3 | - | - | - | - |
-| 4 | - | - | - | - |
+| 1 | CRD | - | - | - |
+| 2 | ATR | - | - | - |
+| 3 | DEV | - | - | - |
+| 4 | TST | - | - | - |
 | 5 | - | - | - | - |
 | 6 | - | - | - | - |
 | 7 | - | - | - | - |
 | 8 | - | - | - | - |
 | 9 | - | - | - | - |
+
+
+
+
+
+
+
+
+APR
+NSP
+RBT
+CLD
+FCD
 
 | Status | Superior |  | 
 | :---------- | :---------- | :---------- | 
