@@ -108,3 +108,6 @@ verifFuncional  --> verifCenarios([Verificar cenários de testes])
 
 avaliarK15      --> End(((" ")))
 ```
+
+
+.
