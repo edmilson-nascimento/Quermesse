@@ -57,5 +57,6 @@ A descrição contempla o fluxo dos passos que um `BC` deve atender para seguir 
 #### Boas praticas para seguir
 Dentre as descrições do processo em si, algumas regras devem ser seguidas para que o fluxo ocorra como esperado durantes os atendimentos, segue abaixo:
 - INC terá que estar inserido corretamente na Quermesse para se iniciar desenvolvimento/analise
+- INC deve ser inserido na Quermesse pelo recurso funcional e atualizado pelo recurso `BC`
 - O Status deve ser alterado de acordo com a evolução do INC
 - O campo Resolução da Corretiva deve ser atualizado a medida que a solução se desenvolve (analise/testes/etc)
