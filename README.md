@@ -61,6 +61,8 @@ Dentre as descrições do processo em si, algumas regras devem ser seguidas para
 - INC deve ser inserido na Quermesse pelo recurso funcional e atualizado pelo recurso `BC`
 - O Status deve ser alterado de acordo com a evolução do INC
 - O campo Resolução da Corretiva deve ser atualizado a medida que a solução se desenvolve (analise/testes/etc)
+- .
+- Após ter o ajuste transportado para _Ambiente de Produção_, o item deve ser fechado na Quermesse.
 
 .
 
