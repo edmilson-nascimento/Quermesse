@@ -125,7 +125,7 @@ RBT
 CLD
 FCD
 
-| Status | Superior |  | 
+| Status | Descrição | Observação | 
 | :---------- | :---------- | :---------- | 
 | Criado | Item foi criado na Quermesse | 
 | Atribuido | Quando o item esta direcionado para atendimento | 
