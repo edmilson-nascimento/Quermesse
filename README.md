@@ -96,6 +96,9 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 | Cancelado | - | - | 
 | Fechado | - | - | 
 
+
+> Tema em construção
+
 Níveis de status (configuração tcode  `OIBS`).
 
 
