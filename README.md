@@ -116,19 +116,6 @@ Níveis de status (configuração tcode  `OIBS`).
 | 9 | FCD | - | - | - |
 
 
-| Status | Descrição | Observação | 
-| :---------- | :---------- | :---------- | 
-| Criado | Item foi criado na Quermesse | 
-| Atribuido | Quando o item esta direcionado para atendimento | 
-| Em desenvolvimento (BC) | O item esta em atendimento pelo lado do `BC` | 
-| Em Teste (Funcional) | A solução proposta em testes funcionais | 
-| Aguardando Aprovação | Aguardando aprovação do DFCT | Acontece após o sucesso dos testes funcionais | 
-| Case SAP criado | Solução sendo atendimento por _Case SAP_ | - | 
-| Reaberto | - | - | 
-| Cancelado | - | - | 
-| Fechado | - | - | 
-
-
 ```mermaid
 flowchart TB
 start((" "))    --> verifFuncional([Verif. funcional responsável])
