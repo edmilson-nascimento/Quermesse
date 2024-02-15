@@ -116,19 +116,3 @@ Níveis de status (configuração tcode  `OIBS`).
 | 9 | FCD | - | - | - |
 
 
-```mermaid
-flowchart TB
-start((" "))    --> verifFuncional([Verif. funcional responsável])
-verifFuncional  --> verifCenarios([Verificar cenários de testes])
-
-    verifCenarios   --> existTestK15(3. Existem testes em k15?)
-    existTestK15    --  Não --> solicitarK15(Solicicitar cenários)
-
-    solicitarK15    --> End
-    existTestK15--  Sim --> avaliarK15(Análise em K15)
-
-avaliarK15      --> End(((" ")))
-```
-
-
-.
