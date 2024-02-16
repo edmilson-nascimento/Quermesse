@@ -114,5 +114,3 @@ Níveis de status (configuração tcode  `OIBS`).
 | 7 | RBT | - | - | - |
 | 8 | CLD | - | - | - |
 | 9 | FCD | - | - | - |
-
-
