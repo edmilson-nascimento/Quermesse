@@ -92,15 +92,13 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 | Em Teste (Funcional) | A solução proposta em testes funcionais | 
 | Aguardando Aprovação | Aguardando aprovação do DFCT | Acontece após o sucesso dos testes funcionais | 
 | ~~Case SAP criado~~ | ~~Solução sendo atendimento por _Case SAP_~~ |  
-| Reaberto | - | - | 
+| Reaberto | Aberto novamente por necessidade de melhoria/ajuste | 
 | Cancelado | - | - | 
 | Fechado | - | - | 
-
 
 > Tema em construção
 
 Níveis de status (configuração tcode  `OIBS`).
-
 
 
 | Nº do status | Status | Texto Breve | Nº mais baixo | Nº mais elevado |
