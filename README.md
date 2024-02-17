@@ -91,7 +91,7 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 | Em desenvolvimento (BC) | O item esta em atendimento pelo lado do `BC` | 
 | Em Teste (Funcional) | A solução proposta em testes funcionais | 
 | Aguardando Aprovação | Aguardando aprovação do DFCT | Acontece após o sucesso dos testes funcionais | 
-| Case SAP criado | Solução sendo atendimento por _Case SAP_ | - | 
+| ~~Case SAP criado~~ | ~~Solução sendo atendimento por _Case SAP_~~ |  
 | Reaberto | - | - | 
 | Cancelado | - | - | 
 | Fechado | - | - | 
