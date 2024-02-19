@@ -100,7 +100,6 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 
 Níveis de status (configuração tcode  `OIBS`).
 
-
 | Nº do status | Status | Texto Breve | Nº mais baixo | Nº mais elevado |
 |:--:|:---:|:---|:--- |:---|
 | 1 | CRD | - | - | - |
