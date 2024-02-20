@@ -6,7 +6,7 @@
 ![Static Badge](https://img.shields.io/badge/miriam_batista-abap-red)
 
 ## Table of Contents
-- [Introduction](#1-Introdução) 
+- [Introduction](#introdução) 
 - [Related Work](#2-related-work)
 - [Best Practices](#3-best-practices) 
   - [Why perform code review](#31-why-perform-code-reviews)
