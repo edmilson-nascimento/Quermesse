@@ -6,7 +6,7 @@
 ![Static Badge](https://img.shields.io/badge/miriam_batista-abap-red)
 
 ## Table of Contents
-- [Introduction](#1-introduction) 
+- [Introduction](#1-Introdução) 
 - [Related Work](#2-related-work)
 - [Best Practices](#3-best-practices) 
   - [Why perform code review](#31-why-perform-code-reviews)
@@ -37,11 +37,7 @@
 - [gCTS Examples](#7-gcts-examples)
 
 ## Introdução
-
-
 Este tem como objecto explicar de maneira directa como são os fluxos e processo no atendimento de *Incidentes* pelo time de `BC` da **EDP JUMP GA**.
-
-
 
 ## Glossário
 É bem comum a utilização de siglas e aqui temos algumas para facilitar o entendimento dos processos/fluxos que são abordados para atendimentos de INC. A descrição abaixo é uma representação particular do cenário abordado e não contempla os termos de forma abrangida e/ou aplicada em outros cenários / times / escopos.
