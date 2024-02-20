@@ -128,5 +128,4 @@ flowchart TD
     Desenvolvimento-BC --> Q6(Case SAP criado)
     Q6 --> Q4
     Q5 --> Q9(Fechado)
-
 ```
