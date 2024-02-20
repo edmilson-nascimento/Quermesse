@@ -13,7 +13,7 @@
   - [Visão de atendimento BC](#visão-de-atendimento-bc)
     - [Status de Incidentes](#status-de-incidentes)
     - [Boas praticas para seguir](#boas-praticas-para-seguir)
-    - [Atividades iniciais](#boas-praticas-para-seguir)
+    - [Atividades iniciais](#atividades-iniciais)
   - [Fluxo de atendimento geral](#fluxo-de-atendimento-geral)
 
 ## Introdução
