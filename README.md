@@ -5,10 +5,43 @@
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/edmilson-nascimento/quermesse)
 ![Static Badge](https://img.shields.io/badge/miriam_batista-abap-red)
 
+## Table of Contents
+- [Introduction](#1-introduction) 
+- [Related Work](#2-related-work)
+- [Best Practices](#3-best-practices) 
+  - [Why perform code review](#31-why-perform-code-reviews)
+  - [Size and Speed of Reviews](#32-size-and-speed-of-reviews)
+  - [How to select Reviewers](#33-how-to-select-reviewers)
+  - [Required Code Reivews](#34-required-code-reviews)
+  - [Code Formatting](#35-code-formatting)
+- [Tools](#4-tools)
+  - [Git](#41-git)
+  - [Code Review Platforms](#42-code-review-platforms)
+  - [CTS](#43-cts)
+  - [ABAP and Git](#44-abap-and-git)
+    - [abapGit](#441-abapgit)
+    - [gCTS](#442-gcts)
+  - [Static Analysis and Tests](#45-static-analysis-and-tests)
+    - [Code Inspector (ATC)](#451-code-inspector-atc)
+    - [abaplint](#452-abaplint)
+    - [Third party checks](#453-third-party-checks)
+  - [abap-openapi-client](#46-abap-openapi-client)
+- [Scenarios](#5-scenarios)
+  - [One Way Synchronization](#51-one-way-synchronization)
+  - [Two Way Synchronization](#52-two-way-synchronization)
+- [abapGit Examples](#6-abapgit-examples) 
+  - [One Way](#61-one-way) 
+    - [Setup](#611-setup) 
+    - [Workflow](#612-workflow)
+  - [Two Way](#62-two-way)
+- [gCTS Examples](#7-gcts-examples)
+
+## Introdução
+
 
 Este tem como objecto explicar de maneira directa como são os fluxos e processo no atendimento de *Incidentes* pelo time de `BC` da **EDP JUMP GA**.
 
-menu
+
 
 ## Glossário
 É bem comum a utilização de siglas e aqui temos algumas para facilitar o entendimento dos processos/fluxos que são abordados para atendimentos de INC. A descrição abaixo é uma representação particular do cenário abordado e não contempla os termos de forma abrangida e/ou aplicada em outros cenários / times / escopos.
@@ -52,7 +85,6 @@ End(((" "))):::endClass
 ### Visão de atendimento BC
 A descrição contempla o fluxo dos passos que um `BC` deve atender para seguir a resolução de um INC na Quermesse. 
 
-
 #### Status de Incidentes
 Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista com descrivos correspondentes.
 
@@ -67,7 +99,6 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 | Reaberto | Aberto novamente por necessidade de melhoria/ajuste | 
 | Cancelado | - | - | 
 | Fechado | - | - | 
-
 
 *_Itens que devem ser criados. Ainda não existentes no cenario atual_;  
 > Tema em construção
