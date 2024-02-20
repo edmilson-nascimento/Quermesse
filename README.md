@@ -16,8 +16,9 @@
     - [Atividades iniciais](#atividades-iniciais)
   - [Fluxo de atendimento geral](#fluxo-de-atendimento-geral)
 
-> Esta documento, assim como o negócio, esta em constante fase de melhoria 	&#xf021;
-<i style='font-size:24px' class='fas'>&#xf021;</i>
+> Esta documento, assim como o negócio, esta em constante fase de melhoria 
+
+
 ## Introdução
 Este tem como objecto explicar de maneira directa como são os fluxos e processo no atendimento de *Incidentes* pelo time de `BC` da **EDP JUMP GA**.
 
