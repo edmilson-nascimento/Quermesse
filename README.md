@@ -72,8 +72,8 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 | * Aguardando Aprovação | Aguardando aprovação do DFCT | Acontece após o sucesso dos testes funcionais | 
 | ~~Case SAP criado~~ | ~~Solução sendo atendimento por _Case SAP_~~ |  
 | Reaberto | Aberto novamente por necessidade de melhoria/ajuste | 
-| Cancelado | - | - | 
-| Fechado | - | - | 
+| Cancelado | Não há mais necessidade de ajuste ABAP | - | 
+| Fechado | Concluído analise/ajuste | Ultima fase do INC | 
 
 *_Itens que devem ser criados. Ainda não existentes no cenario atual_;  
 > Tema em construção
