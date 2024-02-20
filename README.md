@@ -100,19 +100,19 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 *_Itens que devem ser criados. Ainda não existentes no cenario atual_;  
 > Tema em construção
 
-Níveis de status (configuração tcode  `OIBS`).
+Níveis de status (configuração tcode `OIBS`).
 
 | Nº do status | Status | Texto Breve | Nº mais baixo | Nº mais elevado |
 |:--:|:---:|:---|:--- |:---|
-| 1 | CRD | - | - | - |
-| 2 | ATR | - | - | - |
-| 3 | DEV | - | - | - |
-| 4 | TST | - | - | - |
-| 5 | APR | - | - | - |
-| 6 | NSP | - | - | - |
-| 7 | RBT | - | - | - |
-| 8 | CLD | - | - | - |
-| 9 | FCD | - | - | - |
+| 1 | CRD | Criado | 1 - Criado | 4 - Fechado
+| 2 | ATR | Atribuido | 2 - Atribuido | 4 - Fechado
+| 3 | CLD | Cancelado | 3 - Cancelado | 4 - Fechado
+| 4 | FCD | Fechado | 4 - Fechado | 5 - Reaberto
+| 5 | RBT | Reaberto | 2 - Atribuido | 4 - Fechado
+| 6 | DEV | Em desenvolvimento (BC) | 2 - Atribuido | 7 - Em Teste (Funcional)
+| 7 | TST | Em Teste (Funcional) | 6 - Em desenvolvimento (BC) | 8 - Aguardando Aprovação
+| 8 | APR | Aguardando Aprovação | 7 - Em Teste (Funcional) | 4 - Fechado
+
 
 ### Fluxo de atendimento geral
 ```mermaid
