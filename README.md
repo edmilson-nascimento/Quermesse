@@ -113,21 +113,6 @@ Pode-se gerar um arquivo de testes respondendo por exemplo as perguntas abaixo:
 Respondendo as perguntas acima, usando prints caso seja possivel, consegue gerar um arquivo de testes para que o `BC` avalie o cenario.
 
 
-
-Níveis de status (configuração tcode `OIBS`).
-
-| Nº do status | Status | Texto Breve | Nº mais baixo | Nº mais elevado |
-|:--:|:---:|:---|:--- |:---|
-| 1 | CRD | Criado | 1 - Criado | 4 - Fechado
-| 2 | ATR | Atribuido | 2 - Atribuido | 4 - Fechado
-| 3 | CLD | Cancelado | 3 - Cancelado | 4 - Fechado
-| 4 | FCD | Fechado | 4 - Fechado | 5 - Reaberto
-| 5 | RBT | Reaberto | 2 - Atribuido | 4 - Fechado
-| 6 | DEV | Em desenvolvimento (BC) | 2 - Atribuido | 7 - Em Teste (Funcional)
-| 7 | TST | Em Teste (Funcional) | 6 - Em desenvolvimento (BC) | 8 - Aguardando Aprovação
-| 8 | APR | Aguardando Aprovação | 7 - Em Teste (Funcional) | 4 - Fechado
-
-
 ### Fluxo de atendimento geral
 ```mermaid
 flowchart TD
@@ -145,3 +130,16 @@ flowchart TD
     Q9 --> End(((" ")))
 ```
 &#129518;
+
+Níveis de status (configuração tcode `OIBS`).
+
+| Nº do status | Status | Texto Breve | Nº mais baixo | Nº mais elevado |
+|:--:|:---:|:---|:--- |:---|
+| 1 | CRD | Criado | 1 - Criado | 4 - Fechado
+| 2 | ATR | Atribuido | 2 - Atribuido | 4 - Fechado
+| 3 | CLD | Cancelado | 3 - Cancelado | 4 - Fechado
+| 4 | FCD | Fechado | 4 - Fechado | 5 - Reaberto
+| 5 | RBT | Reaberto | 2 - Atribuido | 4 - Fechado
+| 6 | DEV | Em desenvolvimento (BC) | 2 - Atribuido | 7 - Em Teste (Funcional)
+| 7 | TST | Em Teste (Funcional) | 6 - Em desenvolvimento (BC) | 8 - Aguardando Aprovação
+| 8 | APR | Aguardando Aprovação | 7 - Em Teste (Funcional) | 4 - Fechado
