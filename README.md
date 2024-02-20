@@ -122,7 +122,6 @@ flowchart TD
     Q2 --> Desenvolvimento-BC
     Desenvolvimento-BC --> Q4(Em testes funcionais)
 
-
     Q4 --> QQ{{Testes ok?}}
     QQ -- Sim --> Q5(Aguardando Aprovação)
     QQ -- Não --> Desenvolvimento-BC
