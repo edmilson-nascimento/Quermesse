@@ -86,6 +86,11 @@ Dentre as descrições do processo em si, algumas regras devem ser seguidas para
 - O campo Resolução da Corretiva deve ser actualizado a medida que a solução se desenvolve (analise/testes/etc)
 - Após ter o ajuste transportado para _Ambiente de Produção_, o item deve ser fechado na Quermesse.
 
+
+#### Atividades iniciais
+Afim de evitar retrabalho e tambem visando que o INC seja escalavel, é necessário os dados de forma que o `BC` consiga iniciar o atendimento de acordo com os dados que foram inseridos. Ou no caso, pelo menos estar mais inteirado do que trata o fluxo para poder atender o INC.
+
+
 ```mermaid
 flowchart TB
 start((" "))    --> verifFuncional([Verif. funcional responsável])
@@ -99,6 +104,16 @@ verifFuncional  --> verifCenarios([Verificar cenários de testes])
 
 avaliarK15      --> End(((" ")))
 ```
+
+Pode-se gerar um arquivo de testes respondendo por exemplo as perguntas abaixo:
+0. Qual Ambiente?
+1. Quais os passos de execução?
+2. Qual o resultado encontrado hoje?
+3. Qual o resultado esperado e como verificar?
+
+Respondendo as perguntas acima, usando prints caso seja possivel, consegue gerar um arquivo de testes para que o `BC` avalie o cenario.
+
+
 
 Níveis de status (configuração tcode `OIBS`).
 
