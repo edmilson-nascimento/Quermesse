@@ -37,14 +37,13 @@ Itens que foram criados no Service-Now para atendimento do time de Jump GA, pode
 %%{ init: { 'flowchart': { 'curve': 'basis' } } }%%
 flowchart TB
 
-Begin((" ")):::startClass --> service-now([Service-Now])
-service-now --> Atendimento-BC(["Necessario atendimento BC?"])
-Atendimento-BC --> Q1{" "}
+    Begin((" ")):::startClass --> service-now([Service-Now])
+    service-now --> Atendimento-BC(["Necessario atendimento BC?"])
+    Atendimento-BC --> Q1{" "}
 
-Q1 -- Sim --> Quermesse("Adic. na Quermesse") 
-          --> End
-
-Q1 -- Não -->
+    Q1 -- Sim --> Quermesse("Adic. na Quermesse") 
+            --> End
+    Q1 -- Não -->
 
 End(((" "))):::endClass
 ```
@@ -53,11 +52,11 @@ End(((" "))):::endClass
 A descrição contempla o fluxo dos passos que um `BC` deve atender para seguir a resolução de um INC na Quermesse. 
 
 #### Boas praticas para seguir
-Dentre as descrições do processo em si, algumas regras devem ser seguidas para que o fluxo ocorra como esperado durantes os atendimentos, segue abaixo:
-- INC terá que estar inserido corretamente na Quermesse para se iniciar desenvolvimento/analise
-- INC deve ser inserido na Quermesse pelo recurso funcional e atualizado pelo recurso `BC`
+Dentre as descrições do processo em si, algumas regras devem ser seguidas para que o fluxo ocorra como esperado durante os atendimentos, segue abaixo:
+- INC terá que estar inserido correctamente na Quermesse para se iniciar desenvolvimento / analise
+- INC deve ser inserido na Quermesse pelo recurso funcional e actualizado pelo recurso `BC`
 - O Status deve ser alterado de acordo com a evolução do INC
-- O campo Resolução da Corretiva deve ser atualizado a medida que a solução se desenvolve (analise/testes/etc)
+- O campo Resolução da Corretiva deve ser actualizado a medida que a solução se desenvolve (analise/testes/etc)
 - Após ter o ajuste transportado para _Ambiente de Produção_, o item deve ser fechado na Quermesse.
 
 
