@@ -117,14 +117,9 @@ Níveis de status (configuração tcode  `OIBS`).
 ### Fluxo de atendimento geral
 ```mermaid
 flowchart TD
-  subgraph Desenvolvimento
-    Time-BC
-  end
 
     Q1(Criado) --> Q2(Atribuido)
     Q2 --> Desenvolvimento-BC
-%%  Q2 --> Q3(Em desenvolvimento-BC)
-%%  Q3 --> Q4(Em Teste-Funcional)
     Desenvolvimento-BC --> Q4(Em testes funcionais)
 
 
@@ -134,10 +129,5 @@ flowchart TD
     Desenvolvimento-BC --> Q6(Case SAP criado)
     Q6 --> Q4
     Q5 --> Q9(Fechado)
-
-  subgraph Desenvolvimento
-    BC
-  end
-
 
 ```
