@@ -88,14 +88,16 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 | :---------- | :---------- | :---------- | 
 | Criado | Item foi criado na Quermesse | 
 | Atribuido | Quando o item esta direcionado para atendimento | 
-| Em desenvolvimento (BC) | O item esta em atendimento pelo lado do `BC` | 
-| Em Teste (Funcional) | A solução proposta em testes funcionais | 
-| Aguardando Aprovação | Aguardando aprovação do DFCT | Acontece após o sucesso dos testes funcionais | 
+| * Em desenvolvimento (BC) | O item esta em atendimento pelo lado do `BC` | 
+| * Em Teste (Funcional) | A solução proposta em testes funcionais | 
+| * Aguardando Aprovação | Aguardando aprovação do DFCT | Acontece após o sucesso dos testes funcionais | 
 | ~~Case SAP criado~~ | ~~Solução sendo atendimento por _Case SAP_~~ |  
 | Reaberto | Aberto novamente por necessidade de melhoria/ajuste | 
 | Cancelado | - | - | 
 | Fechado | - | - | 
 
+
+*_Itens que devem ser criados. Ainda não existentes no cenario atual_;  
 > Tema em construção
 
 Níveis de status (configuração tcode  `OIBS`).
