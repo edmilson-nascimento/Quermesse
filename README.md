@@ -8,6 +8,8 @@
 
 Este tem como objecto explicar de maneira directa como são os fluxos e processo no atendimento de *Incidentes* pelo time de `BC` da **EDP JUMP GA**.
 
+menu
+
 ## Glossário
 É bem comum a utilização de siglas e aqui temos algumas para facilitar o entendimento dos processos/fluxos que são abordados para atendimentos de INC. A descrição abaixo é uma representação particular do cenário abordado e não contempla os termos de forma abrangida e/ou aplicada em outros cenários / times / escopos.
 
@@ -52,7 +54,7 @@ A descrição contempla o fluxo dos passos que um `BC` deve atender para seguir 
 
 #### Boas praticas para seguir
 Dentre as descrições do processo em si, algumas regras devem ser seguidas para que o fluxo ocorra como esperado durante os atendimentos, segue abaixo:
-- INC terá que estar inserido correctamente na Quermesse para se iniciar desenvolvimento / analise
+- INC terá que estar inserido correctamente na Quermesse para se iniciar desenvolvimento / análise
 - INC deve ser inserido na Quermesse pelo recurso funcional e actualizado pelo recurso `BC`
 - O Status deve ser alterado de acordo com a evolução do INC
 - O campo Resolução da Corretiva deve ser actualizado a medida que a solução se desenvolve (analise/testes/etc)
