@@ -130,3 +130,4 @@ flowchart TD
     Q5 --> Q9(Fechado)
     Q9 --> End(((" ")))
 ```
+&#129518;
