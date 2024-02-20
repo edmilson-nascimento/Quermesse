@@ -3,6 +3,8 @@
 ![Static Badge](https://img.shields.io/badge/development-abap-blue)
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/edmilson-nascimento/quermesse)
 ![Static Badge](https://img.shields.io/badge/miriam_batista-abap-red)
+> 🗘 Esta documento, assim como o negócio, esta em constante fase de melhoria 
+
 
 # Table of Contents
 - [Introdução](#introdução) 
@@ -15,9 +17,7 @@
     - [Boas praticas para seguir](#boas-praticas-para-seguir)
     - [Atividades iniciais](#atividades-iniciais)
   - [Fluxo de atendimento geral](#fluxo-de-atendimento-geral)
-
-> 🗘 Esta documento, assim como o negócio, esta em constante fase de melhoria 
-
+ 
 
 ## Introdução
 Este tem como objecto explicar de maneira directa como são os fluxos e processo no atendimento de *Incidentes* pelo time de `BC` da **EDP JUMP GA**.
