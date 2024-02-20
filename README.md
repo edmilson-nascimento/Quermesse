@@ -12,7 +12,6 @@ Este tem como objecto explicar de maneira directa como são os fluxos e processo
 É bem comum a utilização de siglas e aqui temos algumas para facilitar o entendimento dos processos/fluxos que são abordados para atendimentos de INC. A descrição abaixo é uma representação particular do cenário abordado e não contempla os termos de forma abrangida e/ou aplicada em outros cenários / times / escopos.
 
 
-
 | Sigla |Significado |Descrição |
 | :--- |:---------- |:------------ |
 | AST | - | Abreviação para centralizador de âmbito evoluitivo |
@@ -23,7 +22,6 @@ Este tem como objecto explicar de maneira directa como são os fluxos e processo
 | INC|Incidentes| Abreviação para centralizador de âmbito corretivo |
 | TCODE |Transação SAP | _Transaction code_ de forma abrevia |
 | Service-Now |Sistema de serviços EDP | Sistema interno da EDP usado para gestão de ticket/chamados |
-|.|.|.|
 
 
 ## O que é Quermesse?
