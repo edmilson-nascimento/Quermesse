@@ -1,15 +1,17 @@
 # Quermesse
  
- 
 ![Static Badge](https://img.shields.io/badge/development-abap-blue)
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/edmilson-nascimento/quermesse)
 ![Static Badge](https://img.shields.io/badge/miriam_batista-abap-red)
 
-## Table of Contents
-- [Introduction](#introdução) 
-- [Related Work](#2-related-work)
-- [Best Practices](#3-best-practices) 
-  - [Why perform code review](#31-why-perform-code-reviews)
+# Table of Contents
+- [Introdução](#introdução) 
+- [Glossário](#2-related-work)
+- [O que é Quermesse?](#2-related-work)
+- [Transacção e filtro](#2-related-work)
+- [Visão geral](#2-related-work)
+  - [Visão de atendimento BC](#31-why-perform-code-reviews)
+
   - [Size and Speed of Reviews](#32-size-and-speed-of-reviews)
   - [How to select Reviewers](#33-how-to-select-reviewers)
   - [Required Code Reivews](#34-required-code-reviews)
