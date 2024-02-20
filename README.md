@@ -52,6 +52,26 @@ End(((" "))):::endClass
 ### Visão de atendimento BC
 A descrição contempla o fluxo dos passos que um `BC` deve atender para seguir a resolução de um INC na Quermesse. 
 
+
+#### Status de Incidentes
+Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista com descrivos correspondentes.
+
+| Status | Descrição | Observações | 
+| :---------- | :---------- | :---------- | 
+| Criado | Item foi criado na Quermesse | 
+| Atribuido | Quando o item esta direcionado para atendimento | 
+| * Em desenvolvimento (BC) | O item esta em atendimento pelo lado do `BC` | 
+| * Em Teste (Funcional) | A solução proposta em testes funcionais | 
+| * Aguardando Aprovação | Aguardando aprovação do DFCT | Acontece após o sucesso dos testes funcionais | 
+| ~~Case SAP criado~~ | ~~Solução sendo atendimento por _Case SAP_~~ |  
+| Reaberto | Aberto novamente por necessidade de melhoria/ajuste | 
+| Cancelado | - | - | 
+| Fechado | - | - | 
+
+
+*_Itens que devem ser criados. Ainda não existentes no cenario atual_;  
+> Tema em construção
+
 #### Boas praticas para seguir
 Dentre as descrições do processo em si, algumas regras devem ser seguidas para que o fluxo ocorra como esperado durante os atendimentos, segue abaixo:
 - INC terá que estar inserido correctamente na Quermesse para se iniciar desenvolvimento / análise
@@ -73,25 +93,6 @@ verifFuncional  --> verifCenarios([Verificar cenários de testes])
 
 avaliarK15      --> End(((" ")))
 ```
-
-#### Status de Incidentes
-Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista com descrivos correspondentes.
-
-| Status | Descrição | Observações | 
-| :---------- | :---------- | :---------- | 
-| Criado | Item foi criado na Quermesse | 
-| Atribuido | Quando o item esta direcionado para atendimento | 
-| * Em desenvolvimento (BC) | O item esta em atendimento pelo lado do `BC` | 
-| * Em Teste (Funcional) | A solução proposta em testes funcionais | 
-| * Aguardando Aprovação | Aguardando aprovação do DFCT | Acontece após o sucesso dos testes funcionais | 
-| ~~Case SAP criado~~ | ~~Solução sendo atendimento por _Case SAP_~~ |  
-| Reaberto | Aberto novamente por necessidade de melhoria/ajuste | 
-| Cancelado | - | - | 
-| Fechado | - | - | 
-
-
-*_Itens que devem ser criados. Ainda não existentes no cenario atual_;  
-> Tema em construção
 
 Níveis de status (configuração tcode `OIBS`).
 
