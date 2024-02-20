@@ -16,6 +16,8 @@
     - [Atividades iniciais](#atividades-iniciais)
   - [Fluxo de atendimento geral](#fluxo-de-atendimento-geral)
 
+> Esta documento, assim como o negócio, esta em constante fase de melhoria 	&#xf021;
+<i style='font-size:24px' class='fas'>&#xf021;</i>
 ## Introdução
 Este tem como objecto explicar de maneira directa como são os fluxos e processo no atendimento de *Incidentes* pelo time de `BC` da **EDP JUMP GA**.
 
@@ -77,7 +79,6 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 | Fechado | Concluído analise/ajuste | Ultima fase do INC | 
 
 *_Itens que devem ser criados. Ainda não existentes no cenario atual_;  
-> Tema em construção
 
 #### Boas praticas para seguir
 Dentre as descrições do processo em si, algumas regras devem ser seguidas para que o fluxo ocorra como esperado durante os atendimentos, segue abaixo:
