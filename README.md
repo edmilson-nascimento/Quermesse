@@ -59,8 +59,6 @@ Dentre as descrições do processo em si, algumas regras devem ser seguidas para
 - O campo Resolução da Corretiva deve ser actualizado a medida que a solução se desenvolve (analise/testes/etc)
 - Após ter o ajuste transportado para _Ambiente de Produção_, o item deve ser fechado na Quermesse.
 
-
-
 ```mermaid
 flowchart TB
 start((" "))    --> verifFuncional([Verif. funcional responsável])
@@ -76,7 +74,6 @@ avaliarK15      --> End(((" ")))
 ```
 
 #### Status de Incidentes
-
 Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista com descrivos correspondentes.
 
 | Status | Descrição | Observações | 
