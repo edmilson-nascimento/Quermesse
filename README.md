@@ -16,7 +16,7 @@
     - [Atividades iniciais](#atividades-iniciais)
   - [Fluxo de atendimento geral](#fluxo-de-atendimento-geral)
 
-> Esta documento, assim como o negócio, esta em constante fase de melhoria 
+> Esta documento, assim como o negócio, esta em constante fase de melhoria ↻
 
 
 ## Introdução
