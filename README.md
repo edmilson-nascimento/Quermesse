@@ -80,7 +80,7 @@ verifFuncional  --> verifCenarios([Verificar cenários de testes])
 avaliarK15      --> End(((" ")))
 ```
 
-#### Mais um
+#### Status de Incidentes
 
 Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista com descrivos correspondentes.
 
@@ -113,3 +113,37 @@ Níveis de status (configuração tcode  `OIBS`).
 | 7 | RBT | - | - | - |
 | 8 | CLD | - | - | - |
 | 9 | FCD | - | - | - |
+
+### Fluxo de atendimento geral
+
+flowchart TD
+  subgraph Desenvolvimento
+    Time-BC
+  end
+
+    Q1(Criado) --> Q2(Atribuido)
+    Q2 --> Desenvolvimento-BC
+%%  Q2 --> Q3(Em desenvolvimento-BC)
+%%  Q3 --> Q4(Em Teste-Funcional)
+    Desenvolvimento-BC --> Q4(Em Teste-Funcional)
+
+
+    Q4 --> QQ{{Teste ok?}}
+    QQ -- Sim --> Q5(Aguardando Aprovação)
+%%  QQ -- Não --> Q3
+    QQ -- Não --> Desenvolvimento-BC
+%%  Q3 --> Q6(Case SAP criado)
+    Desenvolvimento-BC --> Q6(Case SAP criado)
+    Q6 --> Q4
+    Q5 --> Q9(Fechado)
+%%  Q5 -- Faltam requisitos --> Q7(Reaberto)
+%%  Q7 --> Q4
+%%  Q2 --> Q8(Cancelado)
+%%  Q4 --> Q9(Fechado)
+%%  Q9 --> Q10[[Dados p/ CR]]
+
+
+
+  subgraph Desenvolvimento
+    BC
+  end
