@@ -117,7 +117,7 @@ Níveis de status (configuração tcode `OIBS`).
 ### Fluxo de atendimento geral
 ```mermaid
 flowchart TD
-
+    start((" ")) --> Q1
     Q1(Criado) --> Q2(Atribuido)
     Q2 --> Desenvolvimento-BC
     Desenvolvimento-BC --> Q4(Em testes funcionais)
