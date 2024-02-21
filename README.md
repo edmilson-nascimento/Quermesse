@@ -108,6 +108,7 @@ verifFuncional  --> verifCenarios([Verificar cenários de testes])
 
 avaliarK15      --> End(((" ")))
 ```
+> O atendimento do INC é inciado **somente após os dados de testes anexados** para chegarmos a soluções mais assertivas.
 
 Pode-se gerar um arquivo de testes respondendo por exemplo as perguntas abaixo:
 
