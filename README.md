@@ -110,6 +110,7 @@ avaliarK15      --> End(((" ")))
 ```
 
 Pode-se gerar um arquivo de testes respondendo por exemplo as perguntas abaixo:
+
 0. Qual Ambiente?
 1. Quais os passos de execução?
 2. Qual o resultado encontrado hoje?
