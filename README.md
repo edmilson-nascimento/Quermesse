@@ -29,7 +29,7 @@ Este tem como objecto explicar de maneira directa como são os fluxos e processo
 
 | Sigla |Significado |Descrição |
 | :--- |:---------- |:------------ |
-| AST | Asset | Abreviação para centralizador de âmbito evoluitivo |
+| AST | Asset | Abreviação para centralizador de âmbito evolutívo |
 | BC|Business Consulting | ~~Find Clarity in Chaos~~ ABAP, Desenvolvedor SAP, Consultor ABAP, SAP DEV|
 | DFCT |Corrective Change | - |
 | FF | Firefighter | Perfil para acesso em Ambiente Produtivo com finalidades de análise e processamento |
