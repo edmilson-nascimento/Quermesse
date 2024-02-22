@@ -73,11 +73,11 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 | :---------- | :---------- | :---------- | 
 | Criado | Item foi criado na Quermesse | 
 | Atribuido | Quando o item esta direcionado para atendimento | ∆ Atendimento ainda não iniciado |
-| * Em desenvolvimento (BC) | O item esta em atendimento pelo lado do `BC` | 
-| * Em Teste (Funcional) | A solução proposta em testes funcionais | 
+| * Em desenvolvimento (BC) | O item esta em atendimento pelo lado do `BC` |  - | 
+| * Em Teste (Funcional) | A solução proposta em testes funcionais |  - | 
 | * Aguardando Aprovação | Aguardando aprovação do DFCT | Acontece após o sucesso dos testes funcionais | 
 | ~~Case SAP criado~~ | ~~Solução sendo atendimento por _Case SAP_~~ |  
-| Reaberto | Aberto novamente por necessidade de melhoria/ajuste | 
+| Reaberto | Aberto novamente por necessidade de melhoria/ajuste | - | 
 | Cancelado | Não há mais necessidade de ajuste ABAP | - | 
 | Fechado | Concluído analise/ajuste | Ultima fase do INC | 
 
