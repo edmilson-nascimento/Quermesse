@@ -139,7 +139,6 @@ flowchart TD
 &#129518;
 
 Níveis de status (configuração tcode `OIBS`).
-
 | Nº do status | Status | Texto Breve | Nº mais baixo | Nº mais elevado |
 |:--:|:---:|:---|:--- |:---|
 | 1 | CRD | Criado | 1 - Criado | 4 - Fechado
