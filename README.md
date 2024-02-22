@@ -72,7 +72,7 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 | Status | Descrição | Observações | 
 | :---------- | :---------- | :---------- | 
 | Criado | Item foi criado na Quermesse | 
-| Atribuido | Quando o item esta direcionado para atendimento | 
+| Atribuido | Quando o item esta direcionado para atendimento | ∆ Atendimento ainda não iniciado |
 | * Em desenvolvimento (BC) | O item esta em atendimento pelo lado do `BC` | 
 | * Em Teste (Funcional) | A solução proposta em testes funcionais | 
 | * Aguardando Aprovação | Aguardando aprovação do DFCT | Acontece após o sucesso dos testes funcionais | 
@@ -131,8 +131,8 @@ flowchart TD
     Q4 --> QQ{{Testes ok?}}
     QQ -- Sim --> Q5(Aguardando Aprovação)
     QQ -- Não --> Desenvolvimento-BC
-    Desenvolvimento-BC --> Q6(Case SAP criado)
-    Q6 --> Q4
+%%  Desenvolvimento-BC --> Q6(Case SAP criado)
+%%  Q6 --> Q4
     Q5 --> Q9(Fechado)
     Q9 --> End(((" ")))
 ```
