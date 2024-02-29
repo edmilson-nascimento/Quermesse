@@ -121,6 +121,7 @@ Respondendo as perguntas acima, usando prints caso seja possivel, consegue gerar
 
 
 ### Fluxo de atendimento geral
+Isso corresponde a uma representação direta de Status de Incidentes mantidos na Quermesse.
 ```mermaid
 flowchart TD
     start((" ")) --> Q1
