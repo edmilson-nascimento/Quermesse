@@ -46,7 +46,7 @@ Quermesse é um sistema criado e mantido pelo time de `BC` da **EDP JUMP GA** qu
 Para acessar a solução deves user a tcode `ZCA_QUERMESSE_BC`. É possível fazer filtro por Status, `BC`que esta atender, Tickets abertos e outros. Por padrão, o filtro inicial esta para que sejam listados os itens que não tem `BC` atribuido e que estão em aberto. Dessa forma tem de forma directo uma lista do que esta disponível para atendimento no momento.
 
 ## Visão geral
-Itens que foram criados no Service-Now para atendimento do time de Jump GA, podem ou não ser adicionados no sistema Quermesse. Isso depende se esse tema necessita de apoio técnico, seja para analise ou pontos de correção. Apos analise do recurso funcional (que é responsável por inserir o item na Quermesse), isso é definido.
+Itens que foram criados no Service-Now para atendimento do time de Jump GA, podem ou não ser adicionados no sistema Quermesse. Isso depende se esse tema necessita de apoio técnico, seja para analise ou pontos de correção. Após analise do recurso funcional (que é responsável por inserir o item na Quermesse), isso é definido.
 
 ```mermaid
 %%{ init: { 'flowchart': { 'curve': 'basis' } } }%%
