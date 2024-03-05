@@ -73,7 +73,9 @@ flowchart TD
     Q2 --> Desenvolvimento-BC
     Desenvolvimento-BC(6. Em desenvolvimento - BC) --> Q4(7. Em Teste - Funcional)
 
-%%  Desenvolvimento-BC --> Q6(Case SAP criado)
+%%  saida de cancelamento
+    Q4 --> Q3(3. Cancelado)
+    Q3 --> End(((" ")))
 
 
     Q4 --> QQ{{Testes ok?}}
