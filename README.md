@@ -125,16 +125,19 @@ Isso corresponde a uma representação direta de Status de Incidentes mantidos n
 ```mermaid
 flowchart TD
     start((" ")) --> Q1
-    Q1(Criado) --> Q2(Atribuido)
+    Q1(1. Criado) --> Q2(2. Atribuido)
     Q2 --> Desenvolvimento-BC
-    Desenvolvimento-BC --> Q4(Em testes funcionais)
+    Desenvolvimento-BC(6. Em desenvolvimento - BC) --> Q4(7. Em Teste - Funcional)
+
+%%  Desenvolvimento-BC --> Q6(Case SAP criado)
+
 
     Q4 --> QQ{{Testes ok?}}
-    QQ -- Sim --> Q5(Aguardando Aprovação)
+    QQ -- Sim --> Q5(8. Aguardando Aprovação)
     QQ -- Não --> Desenvolvimento-BC
 %%  Desenvolvimento-BC --> Q6(Case SAP criado)
 %%  Q6 --> Q4
-    Q5 --> Q9(Fechado)
+    Q5 --> Q9(4. Fechado)
     Q9 --> End(((" ")))
 ```
 &#129518;
