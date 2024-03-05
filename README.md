@@ -63,6 +63,30 @@ flowchart TB
 End(((" "))):::endClass
 ```
 
+
+## Fluxo de atendimento por Status
+Isso corresponde a uma representação direta de Status de Incidentes mantidos na Quermesse.
+```mermaid
+flowchart TD
+    start((" ")) --> Q1
+    Q1(1. Criado) --> Q2(2. Atribuido)
+    Q2 --> Desenvolvimento-BC
+    Desenvolvimento-BC(6. Em desenvolvimento - BC) --> Q4(7. Em Teste - Funcional)
+
+%%  Desenvolvimento-BC --> Q6(Case SAP criado)
+
+
+    Q4 --> QQ{{Testes ok?}}
+    QQ -- Sim --> Q5(8. Aguardando Aprovação)
+    QQ -- Não --> Desenvolvimento-BC
+%%  Desenvolvimento-BC --> Q6(Case SAP criado)
+%%  Q6 --> Q4
+    Q5 --> Q9(4. Fechado)
+    Q9 --> End(((" ")))
+```
+&#129518;
+
+
 ### Visão de atendimento BC
 A descrição contempla o fluxo dos passos que um `BC` deve atender para seguir a resolução de um INC na Quermesse. 
 
@@ -82,6 +106,18 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 | Fechado | Concluído analise/ajuste | Ultima fase do INC | 
 
 *_Itens que devem ser criados. Ainda não existentes no cenario atual_;  
+
+Níveis de status (configuração tcode `OIBS` *ZCA_STAT*).
+| Nº do status | Status | Texto Breve | Nº mais baixo | Nº mais elevado |
+|:--:|:---:|:---|:--- |:---|
+| 1 | CRD | Criado | 1 - Criado | 4 - Fechado
+| 2 | ATR | Atribuido | 2 - Atribuido | 4 - Fechado
+| 3 | CLD | Cancelado | 3 - Cancelado | 4 - Fechado
+| 4 | FCD | Fechado | 4 - Fechado | 5 - Reaberto
+| 5 | RBT | Reaberto | 2 - Atribuido | 4 - Fechado
+| 6 | DEV | Em desenvolvimento (BC) | 2 - Atribuido | 7 - Em Teste (Funcional)
+| 7 | TST | Em Teste (Funcional) | 6 - Em desenvolvimento (BC) | 8 - Aguardando Aprovação
+| 8 | APR | Aguardando Aprovação | 7 - Em Teste (Funcional) | 4 - Fechado
 
 #### Boas praticas para seguir
 Dentre as descrições do processo em si, algumas regras devem ser seguidas para que o fluxo ocorra como esperado durante os atendimentos, segue abaixo:
@@ -119,37 +155,3 @@ Pode-se gerar um arquivo de testes respondendo por exemplo as perguntas abaixo:
 
 Respondendo as perguntas acima, usando prints caso seja possivel, consegue gerar um arquivo de testes para que o `BC` avalie o cenario.
 
-
-### Fluxo de atendimento geral
-Isso corresponde a uma representação direta de Status de Incidentes mantidos na Quermesse.
-```mermaid
-flowchart TD
-    start((" ")) --> Q1
-    Q1(1. Criado) --> Q2(2. Atribuido)
-    Q2 --> Desenvolvimento-BC
-    Desenvolvimento-BC(6. Em desenvolvimento - BC) --> Q4(7. Em Teste - Funcional)
-
-%%  Desenvolvimento-BC --> Q6(Case SAP criado)
-
-
-    Q4 --> QQ{{Testes ok?}}
-    QQ -- Sim --> Q5(8. Aguardando Aprovação)
-    QQ -- Não --> Desenvolvimento-BC
-%%  Desenvolvimento-BC --> Q6(Case SAP criado)
-%%  Q6 --> Q4
-    Q5 --> Q9(4. Fechado)
-    Q9 --> End(((" ")))
-```
-&#129518;
-
-Níveis de status (configuração tcode `OIBS` *ZCA_STAT*).
-| Nº do status | Status | Texto Breve | Nº mais baixo | Nº mais elevado |
-|:--:|:---:|:---|:--- |:---|
-| 1 | CRD | Criado | 1 - Criado | 4 - Fechado
-| 2 | ATR | Atribuido | 2 - Atribuido | 4 - Fechado
-| 3 | CLD | Cancelado | 3 - Cancelado | 4 - Fechado
-| 4 | FCD | Fechado | 4 - Fechado | 5 - Reaberto
-| 5 | RBT | Reaberto | 2 - Atribuido | 4 - Fechado
-| 6 | DEV | Em desenvolvimento (BC) | 2 - Atribuido | 7 - Em Teste (Funcional)
-| 7 | TST | Em Teste (Funcional) | 6 - Em desenvolvimento (BC) | 8 - Aguardando Aprovação
-| 8 | APR | Aguardando Aprovação | 7 - Em Teste (Funcional) | 4 - Fechado
