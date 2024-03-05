@@ -119,7 +119,7 @@ Níveis de status (configuração tcode `OIBS` *ZCA_STAT*).
 | 7 | TST | Em Teste (Funcional) | 6 - Em desenvolvimento (BC) | 8 - Aguardando Aprovação
 | 8 | APR | Aguardando Aprovação | 7 - Em Teste (Funcional) | 4 - Fechado
 
-#### Boas praticas para seguir
+### Boas praticas para seguir
 Dentre as descrições do processo em si, algumas regras devem ser seguidas para que o fluxo ocorra como esperado durante os atendimentos, segue abaixo:
 - INC terá que estar inserido correctamente na Quermesse para se iniciar desenvolvimento / análise
 - INC deve ser inserido na Quermesse pelo recurso funcional e actualizado pelo recurso `BC`
@@ -128,7 +128,7 @@ Dentre as descrições do processo em si, algumas regras devem ser seguidas para
 - Após ter o ajuste transportado para _Ambiente de Produção_, o item deve ser fechado na Quermesse.
 
 
-#### Atividades iniciais
+### Atividades iniciais
 Afim de evitar retrabalho e tambem visando que o INC seja escalável, é necessário termos os dados de forma que o `BC` **consiga iniciar o atendimento de acordo com os dados que foram inseridos**. Ou no caso, pelo menos estar mais inteirado do que trata o fluxo para poder atender o INC.
 
 ```mermaid
