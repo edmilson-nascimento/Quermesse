@@ -5,7 +5,7 @@
 ![Static Badge](https://img.shields.io/badge/miriam_batista-abap-red)
 ![Static Badge](https://img.shields.io/badge/alexandra_espada-abap-pink)
 
-> 🗘 Esta documento, assim como o negócio, esta em constante fase de melhoria 
+> 🗘 Este documento, assim como o negócio, está em constante fase de melhorias
 
 
 # Table of Contents
