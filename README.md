@@ -19,7 +19,6 @@
     - [Boas praticas para seguir](#boas-praticas-para-seguir)
     - [Atividades iniciais](#atividades-iniciais)
   - [Fluxo de atendimento geral](#fluxo-de-atendimento-geral)
- 
 
 ## Introdução
 Este tem como objecto explicar de maneira directa como são os fluxos e processo no atendimento de *Incidentes* pelo time de `BC` da **EDP JUMP GA**.
