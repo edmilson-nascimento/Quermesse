@@ -87,8 +87,7 @@ flowchart TD
     Q9 --> End(((" ")))
 ```
 &#129518;
-
-
+.
 ### Visão de atendimento BC
 A descrição contempla o fluxo dos passos que um `BC` deve atender para seguir a resolução de um INC na Quermesse. 
 
