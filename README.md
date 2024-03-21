@@ -140,18 +140,3 @@ flowchart TD
     Q9 --> End(((" ")))
 ```
 &#129518;
-.
-### Visão de atendimento BC
-A descrição contempla o fluxo dos passos que um `BC` deve atender para seguir a resolução de um INC na Quermesse. 
-
-Níveis de status (configuração tcode `OIBS` *ZCA_STAT*).
-| Nº do status | Status | Texto Breve | Nº mais baixo | Nº mais elevado |
-|:--:|:---:|:---|:--- |:---|
-| 1 | CRD | Criado | 1 - Criado | 4 - Fechado
-| 2 | ATR | Atribuido | 2 - Atribuido | 4 - Fechado
-| 3 | CLD | Cancelado | 3 - Cancelado | 4 - Fechado
-| 4 | FCD | Fechado | 4 - Fechado | 5 - Reaberto
-| 5 | RBT | Reaberto | 2 - Atribuido | 4 - Fechado
-| 6 | DEV | Em desenvolvimento (BC) | 2 - Atribuido | 7 - Em Teste (Funcional)
-| 7 | TST | Em Teste (Funcional) | 6 - Em desenvolvimento (BC) | 8 - Aguardando Aprovação
-| 8 | APR | Aguardando Aprovação | 7 - Em Teste (Funcional) | 4 - Fechado
