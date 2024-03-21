@@ -130,7 +130,6 @@ flowchart TD
     Q4 --> Q3(3. Cancelado)
     Q3 --> End(((" ")))
 
-
     Q4 --> QQ{{Testes ok?}}
     QQ -- Sim --> Q5(8. Aguardando Aprovação)
     QQ -- Não --> Desenvolvimento-BC
