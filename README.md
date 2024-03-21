@@ -65,6 +65,26 @@ End(((" "))):::endClass
 
 ## Fluxo de atendimento por Status
 Isso corresponde a uma representação direta de Status de Incidentes mantidos na Quermesse.
+
+
+#### Status de Incidentes
+Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista com descrivos correspondentes.
+
+| Status | Descrição | Observações | 
+| :---------- | :---------- | :---------- | 
+| Criado | Item foi criado na Quermesse | Esse passo será mantido ate dados de testes serem anexos/compartilhados | 
+| Atribuido | Quando o item esta direcionado para atendimento | ∆ Atendimento ainda não iniciado |
+| * Em desenvolvimento (BC) | O item esta em atendimento pelo lado do `BC` |  - | 
+| * Em Teste (Funcional) | A solução proposta em testes funcionais |  - | 
+| * Aguardando Aprovação | Aguardando aprovação do DFCT | Acontece após o sucesso dos testes funcionais | 
+| ~~Case SAP criado~~ | ~~Solução sendo atendimento por _Case SAP_~~ |  
+| Reaberto | Aberto novamente por necessidade de melhoria/ajuste | - | 
+| Cancelado | Não há mais necessidade de ajuste ABAP | - | 
+| Fechado | Concluído analise/ajuste | Ultima fase do INC | 
+
+*_Itens que devem ser criados. Ainda não existentes no cenario atual_;  
+
+
 ```mermaid
 flowchart TD
     start((" ")) --> Q1
@@ -89,23 +109,6 @@ flowchart TD
 .
 ### Visão de atendimento BC
 A descrição contempla o fluxo dos passos que um `BC` deve atender para seguir a resolução de um INC na Quermesse. 
-
-#### Status de Incidentes
-Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista com descrivos correspondentes.
-
-| Status | Descrição | Observações | 
-| :---------- | :---------- | :---------- | 
-| Criado | Item foi criado na Quermesse | Esse passo será mantido ate dados de testes serem anexos/compartilhados | 
-| Atribuido | Quando o item esta direcionado para atendimento | ∆ Atendimento ainda não iniciado |
-| * Em desenvolvimento (BC) | O item esta em atendimento pelo lado do `BC` |  - | 
-| * Em Teste (Funcional) | A solução proposta em testes funcionais |  - | 
-| * Aguardando Aprovação | Aguardando aprovação do DFCT | Acontece após o sucesso dos testes funcionais | 
-| ~~Case SAP criado~~ | ~~Solução sendo atendimento por _Case SAP_~~ |  
-| Reaberto | Aberto novamente por necessidade de melhoria/ajuste | - | 
-| Cancelado | Não há mais necessidade de ajuste ABAP | - | 
-| Fechado | Concluído analise/ajuste | Ultima fase do INC | 
-
-*_Itens que devem ser criados. Ainda não existentes no cenario atual_;  
 
 Níveis de status (configuração tcode `OIBS` *ZCA_STAT*).
 | Nº do status | Status | Texto Breve | Nº mais baixo | Nº mais elevado |
