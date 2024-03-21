@@ -62,10 +62,44 @@ flowchart TB
 End(((" "))):::endClass
 ```
 
+### Boas praticas para seguir
+Dentre as descrições do processo em si, algumas regras devem ser seguidas para que o fluxo ocorra como esperado durante os atendimentos, segue abaixo:
+- INC terá que estar inserido correctamente na Quermesse para se iniciar desenvolvimento / análise
+- INC deve ser inserido na Quermesse pelo recurso funcional e actualizado pelo recurso `BC`
+- O Status deve ser alterado de acordo com a evolução do INC
+- O campo Resolução da Corretiva deve ser actualizado a medida que a solução se desenvolve (analise/testes/etc)
+- Após ter o ajuste transportado para _Ambiente de Produção_, o item deve ser fechado na Quermesse.
+
+
+### Atividades iniciais
+Afim de evitar retrabalho e tambem visando que o INC seja escalável, é necessário termos os dados de forma que o `BC` **consiga iniciar o atendimento de acordo com os dados que foram inseridos**. Ou no caso, pelo menos estar mais inteirado do que trata o fluxo para poder atender o INC.
+
+```mermaid
+flowchart TB
+start((" "))    --> verifFuncional([Verif. funcional responsável])
+verifFuncional  --> verifCenarios([Verificar cenários de testes])
+
+    verifCenarios   --> existTestK15(Existem testes em k15?)
+    existTestK15    --  Não --> solicitarK15(Solicicitar cenários)
+
+    solicitarK15    --> End
+    existTestK15--  Sim --> avaliarK15(Análise em K15)
+
+avaliarK15      --> End(((" ")))
+```
+> O atendimento do INC é inciado **somente após os dados de testes anexados** para chegarmos a soluções mais assertivas.
+
+Pode-se gerar um arquivo de testes respondendo por exemplo as perguntas abaixo:
+
+0. Qual Ambiente?
+1. Quais os passos de execução?
+2. Qual o resultado encontrado hoje?
+3. Qual o resultado esperado e como verificar?
+
+Respondendo as perguntas acima, usando prints caso seja possivel, consegue gerar um arquivo de testes para que o `BC` avalie o cenario.
 
 ## Fluxo de atendimento por Status
 Isso corresponde a uma representação direta de Status de Incidentes mantidos na Quermesse.
-
 
 #### Status de Incidentes
 Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista com descrivos correspondentes.
@@ -121,40 +155,3 @@ Níveis de status (configuração tcode `OIBS` *ZCA_STAT*).
 | 6 | DEV | Em desenvolvimento (BC) | 2 - Atribuido | 7 - Em Teste (Funcional)
 | 7 | TST | Em Teste (Funcional) | 6 - Em desenvolvimento (BC) | 8 - Aguardando Aprovação
 | 8 | APR | Aguardando Aprovação | 7 - Em Teste (Funcional) | 4 - Fechado
-
-### Boas praticas para seguir
-Dentre as descrições do processo em si, algumas regras devem ser seguidas para que o fluxo ocorra como esperado durante os atendimentos, segue abaixo:
-- INC terá que estar inserido correctamente na Quermesse para se iniciar desenvolvimento / análise
-- INC deve ser inserido na Quermesse pelo recurso funcional e actualizado pelo recurso `BC`
-- O Status deve ser alterado de acordo com a evolução do INC
-- O campo Resolução da Corretiva deve ser actualizado a medida que a solução se desenvolve (analise/testes/etc)
-- Após ter o ajuste transportado para _Ambiente de Produção_, o item deve ser fechado na Quermesse.
-
-
-### Atividades iniciais
-Afim de evitar retrabalho e tambem visando que o INC seja escalável, é necessário termos os dados de forma que o `BC` **consiga iniciar o atendimento de acordo com os dados que foram inseridos**. Ou no caso, pelo menos estar mais inteirado do que trata o fluxo para poder atender o INC.
-
-```mermaid
-flowchart TB
-start((" "))    --> verifFuncional([Verif. funcional responsável])
-verifFuncional  --> verifCenarios([Verificar cenários de testes])
-
-    verifCenarios   --> existTestK15(Existem testes em k15?)
-    existTestK15    --  Não --> solicitarK15(Solicicitar cenários)
-
-    solicitarK15    --> End
-    existTestK15--  Sim --> avaliarK15(Análise em K15)
-
-avaliarK15      --> End(((" ")))
-```
-> O atendimento do INC é inciado **somente após os dados de testes anexados** para chegarmos a soluções mais assertivas.
-
-Pode-se gerar um arquivo de testes respondendo por exemplo as perguntas abaixo:
-
-0. Qual Ambiente?
-1. Quais os passos de execução?
-2. Qual o resultado encontrado hoje?
-3. Qual o resultado esperado e como verificar?
-
-Respondendo as perguntas acima, usando prints caso seja possivel, consegue gerar um arquivo de testes para que o `BC` avalie o cenario.
-
