@@ -118,6 +118,7 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 *_Itens que devem ser criados. Ainda não existentes no cenario atual_;  
 
 
+
 ```mermaid
 flowchart TD
     start((" ")) --> Q1
