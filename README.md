@@ -95,7 +95,7 @@ Pode-se gerar um arquivo de testes respondendo por exemplo as perguntas abaixo:
 2. Qual o resultado encontrado hoje?
 3. Qual o resultado esperado e como verificar?
 
-Respondendo as perguntas acima, usando prints caso seja possível, consegue gerar um arquivo de testes para que o `BC` avalie o cenário.
+Respondendo as perguntas acima, usando prints caso seja possível, consegue se gerar um arquivo de testes para que o `BC` avalie o cenário.
 
 ## Fluxo de atendimento por Status
 Isso corresponde a uma representação direta de Status de Incidentes mantidos na Quermesse.
@@ -106,7 +106,7 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 | Status | Descrição | Observações | 
 | :---------- | :---------- | :---------- | 
 | Criado | Item foi criado na Quermesse | Esse passo será mantido ate dados de testes serem anexos/compartilhados | 
-| Atribuido | Quando o item esta direcionado para atendimento | ∆ Atendimento ainda não iniciado |
+| Atribuído | Quando o item esta direcionado para atendimento | ∆ Atendimento ainda não iniciado |
 | * Em desenvolvimento (BC) | O item esta em atendimento pelo lado do `BC` |  - | 
 | * Em Teste (Funcional) | A solução proposta em testes funcionais |  - | 
 | * Aguardando Aprovação | Aguardando aprovação do DFCT | Acontece após o sucesso dos testes funcionais | 
@@ -115,7 +115,7 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 | Cancelado | Não há mais necessidade de ajuste ABAP | - | 
 | Fechado | Concluído analise/ajuste | Ultima fase do INC | 
 
-*_Itens que devem ser criados. Ainda não existentes no cenario atual_;  
+*_Itens que devem ser criados. Ainda não existentes no cenário atual_;  
 
 
 ### Diagrama de fluxo
