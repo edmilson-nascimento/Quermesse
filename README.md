@@ -64,10 +64,10 @@ End(((" "))):::endClass
 
 ### Boas praticas para seguir
 Dentre as descrições do processo em si, algumas regras devem ser seguidas para que o fluxo ocorra como esperado durante os atendimentos, segue abaixo:
-- INC terá que estar inserido correctamente na Quermesse para se iniciar desenvolvimento / análise
-- INC deve ser inserido na Quermesse pelo recurso funcional e actualizado pelo recurso `BC`
+- INC terá que estar inserido corretamente na Quermesse para se iniciar desenvolvimento / análise
+- INC deve ser inserido na Quermesse pelo recurso funcional e atualizado pelo recurso `BC`
 - O Status deve ser alterado de acordo com a evolução do INC
-- O campo Resolução da Corretiva deve ser actualizado a medida que a solução se desenvolve (analise/testes/etc)
+- O campo Resolução da Corretiva deve ser atualizado a medida que a solução se desenvolve (analise/testes/etc)
 - Após ter o ajuste transportado para _Ambiente de Produção_, o item deve ser fechado na Quermesse.
 
 
