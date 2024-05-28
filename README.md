@@ -72,7 +72,7 @@ Dentre as descrições do processo em si, algumas regras devem ser seguidas para
 
 
 ### Atividades iniciais
-Afim de evitar retrabalho e tambem visando que o INC seja escalável, é necessário termos os dados de forma que o `BC` **consiga iniciar o atendimento de acordo com os dados que foram inseridos**. Ou no caso, pelo menos estar mais inteirado do que trata o fluxo para poder atender o INC.
+Afim de evitar retrabalho e também visando que o INC seja escalável, é necessário termos os dados de forma que o `BC` **consiga iniciar o atendimento de acordo com os dados que foram inseridos**. Ou no caso, pelo menos estar mais inteirado do que trata o fluxo para poder atender o INC.
 
 ```mermaid
 flowchart TB
@@ -118,7 +118,7 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 *_Itens que devem ser criados. Ainda não existentes no cenario atual_;  
 
 
-
+### Diagrama de fluxo
 ```mermaid
 flowchart TD
     start((" ")) --> Q1
