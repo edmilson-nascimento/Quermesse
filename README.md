@@ -5,14 +5,14 @@
 ![Static Badge](https://img.shields.io/badge/miriam_batista-abap-red)
 ![Static Badge](https://img.shields.io/badge/alexandra_espada-abap-pink)
 
-> 🗘 Este documento, assim como o negócio, está em constante fase de melhorias
+> 🗘 Este documento, assim como o negócio, está em constante fase de melhoria e adaptação.
 
 
 # Table of Contents
 - [Introdução](#introdução) 
 - [Glossário](#glossário)
 - [O que é Quermesse?](#o-que-é-quermesse)
-- [Transacção e filtro](#transação-e-filtro)
+- [Transação e filtro](#transação-e-filtro)
 - [Visão geral](#visão-geral)
   - [Visão de atendimento BC](#visão-de-atendimento-bc)
     - [Status de Incidentes](#status-de-incidentes)
