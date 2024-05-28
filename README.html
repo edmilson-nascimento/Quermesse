@@ -371,14 +371,14 @@ code {
 <img src="https://img.shields.io/badge/miriam_batista-abap-red" alt="Static Badge">
 <img src="https://img.shields.io/badge/alexandra_espada-abap-pink" alt="Static Badge"></p>
 <blockquote>
-<p>🗘 Este documento, assim como o negócio, está em constante fase de melhorias</p>
+<p>🗘 Este documento, assim como o negócio, está em constante fase de melhoria e adaptação.</p>
 </blockquote>
 <h1 id="table-of-contents">Table of Contents</h1>
 <ul>
 <li><a href="#introdu%C3%A7%C3%A3o">Introdução</a></li>
 <li><a href="#gloss%C3%A1rio">Glossário</a></li>
 <li><a href="#o-que-%C3%A9-quermesse">O que é Quermesse?</a></li>
-<li><a href="#transac%C3%A7%C3%A3o-e-filtro">Transacção e filtro</a></li>
+<li><a href="#transa%C3%A7%C3%A3o-e-filtro">Transação e filtro</a></li>
 <li><a href="#vis%C3%A3o-geral">Visão geral</a>
 <ul>
 <li><a href="#vis%C3%A3o-de-atendimento-bc">Visão de atendimento BC</a>
@@ -393,7 +393,7 @@ code {
 </li>
 </ul>
 <h2 id="introdu%C3%A7%C3%A3o">Introdução</h2>
-<p>Este tem como objecto explicar de maneira directa como são os fluxos e processo no atendimento de <em>Incidentes</em> pelo time de <code>BC</code> da <strong>EDP JUMP GA</strong>.</p>
+<p>Este tem como objetivo explicar de maneira direta como são os fluxos e processo no atendimento de <em>Incidentes</em> pelo time de <code>BC</code> da <strong>EDP JUMP GA</strong>.</p>
 <h2 id="gloss%C3%A1rio">Glossário</h2>
 <p>É bem comum a utilização de siglas e aqui temos algumas para facilitar o entendimento dos processos/fluxos que são abordados para atendimentos de INC. A descrição abaixo é uma representação particular do cenário abordado e não contempla os termos de forma abrangida e/ou aplicada em outros cenários / times / escopos.</p>
 <table>
@@ -408,7 +408,7 @@ code {
 <tr>
 <td style="text-align:left">AST</td>
 <td style="text-align:left">Asset</td>
-<td style="text-align:left">Abreviação para centralizador de âmbito evolutívo</td>
+<td style="text-align:left">Abreviação para centralizador de âmbito evolutivo</td>
 </tr>
 <tr>
 <td style="text-align:left">BC</td>
@@ -448,16 +448,16 @@ code {
 </tbody>
 </table>
 <h2 id="o-que-%C3%A9-quermesse">O que é Quermesse?</h2>
-<p>Quermesse é um sistema criado e mantido pelo time de <code>BC</code> da <strong>EDP JUMP GA</strong> que tem como finalidade gerir os <em>Incidentes</em> que foram criados no sistema Service-Now e que exigem a actuação do time de <code>BC</code> para análises, melhorias e outros.</p>
-<h2 id="transac%C3%A7%C3%A3o-e-filtro">Transacção e filtro</h2>
-<p>Para acessar a solução deves user a tcode <code>ZCA_QUERMESSE_BC</code>. É possível fazer filtro por Status, <code>BC</code>que esta atender, Tickets abertos e outros. Por padrão, o filtro inicial esta para que sejam listados os itens que não tem <code>BC</code> atribuido e que estão em aberto. Dessa forma tem de forma directo uma lista do que esta disponível para atendimento no momento.</p>
+<p>Quermesse é um sistema criado e mantido pelo time de <code>BC</code> da <strong>EDP JUMP GA</strong> que tem como finalidade gerir os <em>Incidentes</em> que foram criados no sistema Service-Now e que exigem a atuação do time de <code>BC</code> para análises, melhorias e outros.</p>
+<h2 id="transa%C3%A7%C3%A3o-e-filtro">Transação e filtro</h2>
+<p>Para acessar a solução deves user a tcode <code>ZCA_QUERMESSE_BC</code>. É possível fazer filtro por Status, <code>BC</code>que esta atender, Tickets abertos e outros. Por padrão, o filtro inicial esta para que sejam listados os itens que não tem <code>BC</code> atribuído e que estão em aberto. Dessa forma tem de forma direta uma lista do que esta disponível para atendimento no momento.</p>
 <h2 id="vis%C3%A3o-geral">Visão geral</h2>
 <p>Itens que foram criados no Service-Now para atendimento do time de Jump GA, podem ou não ser adicionados no sistema Quermesse. Isso depende se esse tema necessita de apoio técnico, seja para analise ou pontos de correção. Após analise do recurso funcional (que é responsável por inserir o item na Quermesse), isso é definido.</p>
 <pre><code class="language-mermaid"><div class="mermaid">%%{ init: { 'flowchart': { 'curve': 'basis' } } }%%
 flowchart TB
 
     Begin((" ")):::startClass --> service-now([Service-Now])
-    service-now --> Atendimento-BC(["Necessario atendimento BC?"])
+    service-now --> Atendimento-BC(["Necessário atendimento BC?"])
     Atendimento-BC --> Q1{" "}
 
     Q1 -- Sim --> Quermesse("Adic. na Quermesse") 
@@ -469,20 +469,20 @@ End(((" "))):::endClass
 <h3 id="boas-praticas-para-seguir">Boas praticas para seguir</h3>
 <p>Dentre as descrições do processo em si, algumas regras devem ser seguidas para que o fluxo ocorra como esperado durante os atendimentos, segue abaixo:</p>
 <ul>
-<li>INC terá que estar inserido correctamente na Quermesse para se iniciar desenvolvimento / análise</li>
-<li>INC deve ser inserido na Quermesse pelo recurso funcional e actualizado pelo recurso <code>BC</code></li>
+<li>INC terá que estar inserido corretamente na Quermesse para se iniciar desenvolvimento / análise</li>
+<li>INC deve ser inserido na Quermesse pelo recurso funcional e atualizado pelo recurso <code>BC</code></li>
 <li>O Status deve ser alterado de acordo com a evolução do INC</li>
-<li>O campo Resolução da Corretiva deve ser actualizado a medida que a solução se desenvolve (analise/testes/etc)</li>
+<li>O campo Resolução da Corretiva deve ser atualizado a medida que a solução se desenvolve (analise/testes/etc)</li>
 <li>Após ter o ajuste transportado para <em>Ambiente de Produção</em>, o item deve ser fechado na Quermesse.</li>
 </ul>
 <h3 id="atividades-iniciais">Atividades iniciais</h3>
-<p>Afim de evitar retrabalho e tambem visando que o INC seja escalável, é necessário termos os dados de forma que o <code>BC</code> <strong>consiga iniciar o atendimento de acordo com os dados que foram inseridos</strong>. Ou no caso, pelo menos estar mais inteirado do que trata o fluxo para poder atender o INC.</p>
+<p>Afim de evitar retrabalho e também visando que o INC seja escalável, é necessário termos os dados de forma que o <code>BC</code> <strong>consiga iniciar o atendimento de acordo com os dados que foram inseridos</strong>. Ou no caso, pelo menos estar mais inteirado do que trata o fluxo para poder atender o INC.</p>
 <pre><code class="language-mermaid"><div class="mermaid">flowchart TB
 start((" "))    --> verifFuncional([Verif. funcional responsável])
 verifFuncional  --> verifCenarios([Verificar cenários de testes])
 
     verifCenarios   --> existTestK15(Existem testes em k15?)
-    existTestK15    --  Não --> solicitarK15(Solicicitar cenários)
+    existTestK15    --  Não --> solicitarK15(Solicitar cenários)
 
     solicitarK15    --> End
     existTestK15--  Sim --> avaliarK15(Análise em K15)
@@ -499,11 +499,11 @@ avaliarK15      --> End(((" ")))
 <li>Qual o resultado encontrado hoje?</li>
 <li>Qual o resultado esperado e como verificar?</li>
 </ol>
-<p>Respondendo as perguntas acima, usando prints caso seja possivel, consegue gerar um arquivo de testes para que o <code>BC</code> avalie o cenario.</p>
+<p>Respondendo as perguntas acima, usando prints caso seja possível, consegue se gerar um arquivo de testes para que o <code>BC</code> avalie o cenário.</p>
 <h2 id="fluxo-de-atendimento-por-status">Fluxo de atendimento por Status</h2>
 <p>Isso corresponde a uma representação direta de Status de Incidentes mantidos na Quermesse.</p>
 <h4 id="status-de-incidentes">Status de Incidentes</h4>
-<p>Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista com descrivos correspondentes.</p>
+<p>Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista com descritivos correspondentes.</p>
 <table>
 <thead>
 <tr>
@@ -519,7 +519,7 @@ avaliarK15      --> End(((" ")))
 <td style="text-align:left">Esse passo será mantido ate dados de testes serem anexos/compartilhados</td>
 </tr>
 <tr>
-<td style="text-align:left">Atribuido</td>
+<td style="text-align:left">Atribuído</td>
 <td style="text-align:left">Quando o item esta direcionado para atendimento</td>
 <td style="text-align:left">∆ Atendimento ainda não iniciado</td>
 </tr>
@@ -560,10 +560,11 @@ avaliarK15      --> End(((" ")))
 </tr>
 </tbody>
 </table>
-<p>*<em>Itens que devem ser criados. Ainda não existentes no cenario atual</em>;</p>
+<p>*<em>Itens que devem ser criados. Ainda não existentes no cenário atual</em>;</p>
+<h3 id="diagrama-de-fluxo">Diagrama de fluxo</h3>
 <pre><code class="language-mermaid"><div class="mermaid">flowchart TD
     start((" ")) --> Q1
-    Q1(1. Criado) --> Q2(2. Atribuido)
+    Q1(1. Criado) --> Q2(2. Atribuído)
     Q2 --> Desenvolvimento-BC
     Desenvolvimento-BC(6. Em desenvolvimento - BC) --> Q4(7. Em Teste - Funcional)
 
