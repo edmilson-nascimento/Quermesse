@@ -80,7 +80,7 @@ start((" "))    --> verifFuncional([Verif. funcional responsável])
 verifFuncional  --> verifCenarios([Verificar cenários de testes])
 
     verifCenarios   --> existTestK15(Existem testes em k15?)
-    existTestK15    --  Não --> solicitarK15(Solicicitar cenários)
+    existTestK15    --  Não --> solicitarK15(Solicitar cenários)
 
     solicitarK15    --> End
     existTestK15--  Sim --> avaliarK15(Análise em K15)
@@ -122,7 +122,7 @@ Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista 
 ```mermaid
 flowchart TD
     start((" ")) --> Q1
-    Q1(1. Criado) --> Q2(2. Atribuido)
+    Q1(1. Criado) --> Q2(2. Atribuído)
     Q2 --> Desenvolvimento-BC
     Desenvolvimento-BC(6. Em desenvolvimento - BC) --> Q4(7. Em Teste - Funcional)
 
