@@ -95,13 +95,13 @@ Pode-se gerar um arquivo de testes respondendo por exemplo as perguntas abaixo:
 2. Qual o resultado encontrado hoje?
 3. Qual o resultado esperado e como verificar?
 
-Respondendo as perguntas acima, usando prints caso seja possivel, consegue gerar um arquivo de testes para que o `BC` avalie o cenario.
+Respondendo as perguntas acima, usando prints caso seja possível, consegue gerar um arquivo de testes para que o `BC` avalie o cenário.
 
 ## Fluxo de atendimento por Status
 Isso corresponde a uma representação direta de Status de Incidentes mantidos na Quermesse.
 
 #### Status de Incidentes
-Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista com descrivos correspondentes.
+Para facilitar o entendimento de cada Status na Quermesse, segue abaixo a lista com descritivos correspondentes.
 
 | Status | Descrição | Observações | 
 | :---------- | :---------- | :---------- | 
