@@ -12,7 +12,7 @@
 - [Introdução](#introdução) 
 - [Glossário](#glossário)
 - [O que é Quermesse?](#o-que-é-quermesse)
-- [Transacção e filtro](#transacção-e-filtro)
+- [Transacção e filtro](#transação-e-filtro)
 - [Visão geral](#visão-geral)
   - [Visão de atendimento BC](#visão-de-atendimento-bc)
     - [Status de Incidentes](#status-de-incidentes)
@@ -21,14 +21,14 @@
   - [Fluxo de atendimento geral](#fluxo-de-atendimento-geral)
 
 ## Introdução
-Este tem como objecto explicar de maneira directa como são os fluxos e processo no atendimento de *Incidentes* pelo time de `BC` da **EDP JUMP GA**.
+Este tem como objetivo explicar de maneira direta como são os fluxos e processo no atendimento de *Incidentes* pelo time de `BC` da **EDP JUMP GA**.
 
 ## Glossário
 É bem comum a utilização de siglas e aqui temos algumas para facilitar o entendimento dos processos/fluxos que são abordados para atendimentos de INC. A descrição abaixo é uma representação particular do cenário abordado e não contempla os termos de forma abrangida e/ou aplicada em outros cenários / times / escopos.
 
 | Sigla |Significado |Descrição |
 | :--- |:---------- |:------------ |
-| AST | Asset | Abreviação para centralizador de âmbito evolutívo |
+| AST | Asset | Abreviação para centralizador de âmbito evolutivo |
 | BC|Business Consulting | ~~Find Clarity in Chaos~~ ABAP, Desenvolvedor SAP, Consultor ABAP, SAP DEV|
 | DFCT |Corrective Change | - |
 | FF | Firefighter | Perfil para acesso em Ambiente Produtivo com finalidades de análise e processamento |
@@ -41,7 +41,7 @@ Este tem como objecto explicar de maneira directa como são os fluxos e processo
 ## O que é Quermesse?
 Quermesse é um sistema criado e mantido pelo time de `BC` da **EDP JUMP GA** que tem como finalidade gerir os *Incidentes* que foram criados no sistema Service-Now e que exigem a atuação do time de `BC` para análises, melhorias e outros.
 
-## Transacção e filtro
+## Transação e filtro
 Para acessar a solução deves user a tcode `ZCA_QUERMESSE_BC`. É possível fazer filtro por Status, `BC`que esta atender, Tickets abertos e outros. Por padrão, o filtro inicial esta para que sejam listados os itens que não tem `BC` atribuído e que estão em aberto. Dessa forma tem de forma direta uma lista do que esta disponível para atendimento no momento.
 
 ## Visão geral
