@@ -1,4 +1,6 @@
 
 > 🗘 Este documento, assim como o negócio, está em constante fase de melhoria e adaptação.
 
-![N|Solid](img/lista-tarefas-geral-05.png)
+Exemplo de como verificar apps por instalar.
+
+![N|Solid](img/winget.gif)
