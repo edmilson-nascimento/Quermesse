@@ -4,3 +4,5 @@
 Exemplo de como verificar apps por instalar.
 
 ![N|Solid](img/winget.gif)
+
+Conflito.
