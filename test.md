@@ -6,3 +6,4 @@ Exemplo de como verificar apps por instalar.
 ![N|Solid](img/winget.gif)
 
 Alterações da Alexandra.
+Segunda alteração.
