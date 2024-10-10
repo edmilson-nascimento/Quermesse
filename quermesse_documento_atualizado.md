@@ -2,7 +2,7 @@
 ## Introdução
 Este documento tem como objetivo explicar de maneira direta como são os fluxos e processos no atendimento de *Incidentes* pelo time de `BC` da **EDP JUMP GA**.
 
-*--> TODO* Incluir uma breve explicação sobre a **EDP JUMP GA**, para contextualizar o leitor sobre o que é e qual sua função.
+**--> TODO** Incluir uma breve explicação sobre a **EDP JUMP GA**, para contextualizar o leitor sobre o que é e qual sua função.
 
 ## Glossário
 É bem comum a utilização de siglas e aqui temos algumas para facilitar o entendimento dos processos/fluxos que são abordados para atendimentos de INC. A descrição abaixo é uma representação particular do cenário abordado e não contempla os termos de forma abrangente e/ou aplicada em outros cenários / times / escopos.
@@ -21,7 +21,7 @@ Este documento tem como objetivo explicar de maneira direta como são os fluxos 
 ## O que é Quermesse?
 Quermesse é um sistema criado e mantido pelo time de `BC` da **EDP JUMP GA** que tem como finalidade gerir os *Incidentes* que foram criados no sistema Service-Now e que exigem a atuação do time de `BC` para análises, melhorias e outros.
 
-*--> TODO* Incluir exemplo visual do sistema Quermesse ou expandir detalhes sobre como ele se integra ao Service-Now.
+**--> TODO** Incluir exemplo visual do sistema Quermesse ou expandir detalhes sobre como ele se integra ao Service-Now.
 
 ## Transação e filtro
 Para acessar a solução, deve-se usar a tcode `ZCA_QUERMESSE_BC`. Uma transação (ou TCODE) é um código utilizado no sistema SAP para executar uma função ou acessar uma aplicação específica. No Quermesse, essa transação permite filtrar por Status, `BC` responsável, tickets abertos e outros. Por padrão, o filtro inicial lista itens sem `BC` atribuído e que estão em aberto, facilitando a identificação de demandas disponíveis.
@@ -49,7 +49,7 @@ Para garantir que o fluxo ocorra como esperado, algumas regras devem ser seguida
 - O campo Resolução da Corretiva deve ser atualizado conforme a solução avança (análise/testes/etc.)
 - Após o ajuste ser transportado para o _Ambiente de Produção_, o item deve ser fechado na Quermesse
 
-*--> TODO* Adicionar mais contexto ou exemplos práticos de como essas boas práticas são aplicadas.
+**--> TODO** Adicionar mais contexto ou exemplos práticos de como essas boas práticas são aplicadas.
 
 ## Atividades iniciais
 Para evitar retrabalho e garantir que o INC seja escalável, é necessário que os dados estejam organizados para que o `BC` possa iniciar o atendimento. Os dados de testes anexados são essenciais para garantir soluções mais assertivas.
@@ -111,4 +111,4 @@ flowchart TD
     Q9 --> End(((" ")))
 ```
 
-*--> TODO* Considerar adicionar uma legenda para os diagramas, explicando os símbolos e a lógica de decisão utilizada.
+**--> TODO** Considerar adicionar uma legenda para os diagramas, explicando os símbolos e a lógica de decisão utilizada.
