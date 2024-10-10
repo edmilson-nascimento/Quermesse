@@ -9,16 +9,18 @@
 
 
 # Table of Contents
-- [Introdução](#introdução) 
-- [Glossário](#glossário)
-- [O que é Quermesse?](#o-que-é-quermesse)
-- [Transação e filtro](#transação-e-filtro)
-- [Visão geral](#visão-geral)
-  - [Visão de atendimento BC](#visão-de-atendimento-bc)
+## Menu
+1. [Introdução](#introdução)
+2. [Glossário](#glossário)
+3. [O que é Quermesse?](#o-que-é-quermesse)
+4. [Transação e filtro](#transação-e-filtro)
+5. [Visão geral](#visão-geral)
+6. [Boas práticas](#boas-praticas)
+7. [Atividades iniciais](#atividades-iniciais)
+8. [Fluxo de atendimento por Status](#fluxo-de-atendimento-por-status)
     - [Status de Incidentes](#status-de-incidentes)
-    - [Boas praticas para seguir](#boas-praticas-para-seguir)
-    - [Atividades iniciais](#atividades-iniciais)
-  - [Fluxo de atendimento geral](#fluxo-de-atendimento-geral)
+    - [Diagrama de fluxo](#diagrama-de-fluxo)
+
 
 ## Introdução
 Este tem como objetivo explicar de maneira direta como são os fluxos e processo no atendimento de *Incidentes* pelo time de `BC` da **EDP JUMP GA**.
