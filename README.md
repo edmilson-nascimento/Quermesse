@@ -20,6 +20,33 @@
     - [Diagrama de fluxo](#diagrama-de-fluxo)
 
 
+## Menu
+
+1. [Introdução](#introdução)
+    - Objetivo do documento
+    - **TODO** Incluir explicação sobre **EDP JUMP GA**
+2. [Glossário](#glossário)
+    - Definição de siglas e termos
+3. [O que é Quermesse?](#o-que-é-quermesse)
+    - Descrição do sistema Quermesse
+    - **TODO** Incluir exemplo visual do sistema Quermesse ou expandir detalhes
+4. [Transação e filtro](#transação-e-filtro)
+    - Descrição da transação `ZCA_QUERMESSE_BC`
+5. [Visão geral](#visão-geral)
+    - Inclusão de itens no Quermesse
+6. [Boas práticas](#boas-práticas)
+    - Regras para garantir o fluxo correto de atendimento
+    - **TODO** Adicionar mais contexto ou exemplos práticos
+7. [Atividades iniciais](#atividades-iniciais)
+    - Dados necessários para iniciar o atendimento
+8. [Fluxo de atendimento por Status](#fluxo-de-atendimento-por-status)
+    - Definição dos status dos incidentes no Quermesse
+9. [Diagrama de fluxo](#diagrama-de-fluxo)
+    - Representação gráfica do fluxo de atendimento por status
+    - **TODO** Considerar adicionar uma legenda para os diagramas
+
+
+
 ## Introdução
 Este documento tem como objetivo explicar de maneira direta como são os fluxos e processos no atendimento de *Incidentes* pelo time de `BC` da **EDP JUMP GA**.
 
