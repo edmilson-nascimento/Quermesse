@@ -56,13 +56,13 @@ Para evitar retrabalho e garantir que o INC seja escalável, é necessário que 
 
 ```mermaid
 flowchart TB
-start((" "))    --> verifFuncional([Verif. funcional responsável])
-verifFuncional  --> verifCenarios([Verificar cenários de testes])
-verifCenarios   --> existTestK15(Existem testes em k15?)
-existTestK15    --  Não --> solicitarK15(Solicitar cenários)
-solicitarK15    --> End
-existTestK15--  Sim --> avaliarK15(Análise em K15)
-avaliarK15      --> End(((" ")))
+    start((" "))    --> verifFuncional([Verif. funcional responsável])
+    verifFuncional  --> verifCenarios([Verificar cenários de testes])
+    verifCenarios   --> existTestK15(Existem testes em k15?)
+    existTestK15    --  Não --> solicitarK15(Solicitar cenários)
+    solicitarK15    --> End
+    existTestK15--  Sim --> avaliarK15(Análise em K15)
+    avaliarK15      --> End(((" ")))
 ```
 
 > O atendimento do INC é iniciado **somente após os dados de testes serem anexados**. A premissa de dados está diretamente ligada à qualidade da entrega da solução.
@@ -95,8 +95,9 @@ Esta seção representa os diferentes Status dos Incidentes mantidos na Quermess
 ### Diagrama de fluxo
 ```mermaid
 flowchart TD
+
     start((" ")) --> Q1
-    Q1(1. Criado) --> Q2(2. Atribuído)
+    Q1("1. Criado") --> Q2(2. Atribuído)
     Q2 --> Desenvolvimento-BC
     Desenvolvimento-BC(6. Em desenvolvimento - BC) --> Q4(7. Em Teste - Funcional)
 
