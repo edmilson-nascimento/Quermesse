@@ -62,7 +62,7 @@ flowchart TB
 End(((" "))):::endClass
 ```
 
-### Boas praticas para seguir
+### Boas praticas
 Dentre as descrições do processo em si, algumas regras devem ser seguidas para que o fluxo ocorra como esperado durante os atendimentos, segue abaixo:
 - INC terá que estar inserido corretamente na Quermesse para se iniciar desenvolvimento / análise
 - INC deve ser inserido na Quermesse pelo recurso funcional e atualizado pelo recurso `BC`
