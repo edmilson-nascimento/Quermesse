@@ -19,7 +19,6 @@
     - [Status de Incidentes](#status-de-incidentes)
     - [Diagrama de fluxo](#diagrama-de-fluxo)
 
-
 ## Menu
 
 1. [Introdução](#introdução)
