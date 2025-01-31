@@ -8,18 +8,18 @@
 > 🗘 Este documento, assim como o negócio, está em constante fase de melhoria e adaptação.
 
 ## Menu
-
 1. [Introdução](#introdução)
 2. [Glossário](#glossário)
 3. [O que é Quermesse?](#o-que-é-quermesse)
-4. [Transação e filtro](#transação-e-filtro)
-5. [Visão geral](#visão-geral)
-6. [Boas práticas](#boas-práticas)
-7. [Atividades iniciais](#atividades-iniciais)
-8. [Fluxo Completo](#fluxo-completo)
-9. [Fluxo de atendimento por Status](#fluxo-de-atendimento-por-status)
-    - [Status de Incidentes](#status-de-incidentes)
-    - [Diagrama de fluxo](#diagrama-de-fluxo)
+   - [Visão geral](#visão-geral)
+   - [Como funciona?](#como-funciona)
+   - [Transação e filtro](#transação-e-filtro)
+4. [Boas práticas](#boas-práticas)
+5. [Atividades iniciais](#atividades-iniciais)
+6. [Fluxo Completo](#fluxo-completo)
+7. [Fluxo de atendimento por Status](#fluxo-de-atendimento-por-status)
+   - [Status de Incidentes](#status-de-incidentes)
+   - [Diagrama de fluxo](#diagrama-de-fluxo)
 
 ---
 
@@ -86,9 +86,8 @@ flowchart TB
 
 ## Introdução
 
-Este documento tem como objetivo explicar de maneira direta como são os fluxos e processos no atendimento de *Incidentes* pelo time de `BC` da **EDP JUMP GA**.
+A **EDP JUMP GA** é uma área da EDP responsável pela gestão de ativos e processos relacionados ao setor elétrico. O time de **Business Consulting (BC)** atua no desenvolvimento e manutenção de soluções SAP para suportar as operações da empresa, garantindo eficiência e conformidade com os padrões técnicos e regulatórios.
 
-**--> TODO** Incluir uma breve explicação sobre a **EDP JUMP GA**, para contextualizar o leitor sobre o que é e qual sua função.
 
 ## Glossário
 
