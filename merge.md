@@ -166,18 +166,6 @@ Para garantir que o fluxo ocorra como esperado, algumas regras devem ser seguida
   - Exemplo: "Corrigido erro na rotina de cálculo de impostos. Ajustada a tabela ZIMPOSTOS para incluir novos códigos fiscais."
 - **Fechamento do INC:** Após o transporte para produção, certifique-se de que o INC seja fechado no Quermesse. Isso encerra o ciclo de atendimento e evita duplicidade de esforços.
 
-2627848 - Internal error - value range of IXADRCOMC
-
-
-SAP Note/KBA
-Component
-
-2627848	Internal error - value range of IXADRCOMC
-594897	Inconsistency in table ADRCOMC	
-436119	Correction report for communication data inconsistencies	
-2436246	Error during the data exchange of communication data
-
-
 
 ## Exemplos práticos
 **Sugestão de texto:**
