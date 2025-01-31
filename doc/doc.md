@@ -10,22 +10,22 @@
 
 ---
 
-## 1. Regras Gerais
-- Todas as atividades corretivas devem estar ligadas a um **incidente/ticket**.
-- O sistema usado para análise e desenvolvimento ABAP é o **Quermesse**.
-- O incidente deve ser registrado na **transação ZCA_QUERMESSE_BC - Quermesse BC**.
-- O registro deve conter:
-  - **Cenário atual**
-  - **Cenário esperado**
-  - **Passos de reprodução**
-- O **BC (Business Consultant)** não deve atender incidentes que não estejam registrados na Quermesse.
-- O **líder do time de corretiva** define a ordem de atendimento.
-- O **algoritmo da Quermesse** prioriza os incidentes com base em **urgência e tempo de abertura**.
-- A comunicação ocorre da seguinte forma:
-  - **BC ↔ Consultor Funcional** → via Microsoft Teams.
-  - **Consultor Funcional ↔ Usuário** → via **Service-Now**.
-- A mudança deve ser **aprovada pelo Tech Lead (TL)** antes de ir para produção.
-- O ambiente de **homologação é o K15**.
+## 1. 📜 Regras Gerais
+- 🔗 Todas as atividades corretivas devem estar ligadas a um **incidente/ticket**.
+- 🖥️ O sistema usado para análise e desenvolvimento ABAP é o **Quermesse**.
+- 📝 O incidente deve ser registrado na **transação ZCA_QUERMESSE_BC - Quermesse BC**.
+- 📌 O registro deve conter:
+  - 🛠️ **Cenário atual**
+  - 🎯 **Cenário esperado**
+  - 📂 **Passos de reprodução**
+- 🚫 O **BC (Business Consultant)** não deve atender incidentes que não estejam registrados na Quermesse.
+- 📊 O **líder do time de corretiva** define a ordem de atendimento.
+- ⚙️ O **algoritmo da Quermesse** prioriza os incidentes com base em **urgência e tempo de abertura**.
+- 💬 A comunicação ocorre da seguinte forma:
+  - 🔄 **BC ↔ Consultor Funcional** → via Microsoft Teams.
+  - 📡 **Consultor Funcional ↔ Usuário** → via **Service-Now**.
+- ✅ A mudança deve ser **aprovada pelo Tech Lead (TL)** antes de ir para produção.
+- 🏗️ O ambiente de **homologação é o K15**.
 
 ---
 
