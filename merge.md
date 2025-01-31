@@ -21,7 +21,6 @@
    - [Status de Incidentes](#status-de-incidentes)
    - [Diagrama de fluxo](#diagrama-de-fluxo)
 
----
 
 ## Fluxo Completo
 
@@ -107,7 +106,7 @@ A **EDP JUMP GA** é uma área da EDP responsável pela gestão de ativos e proc
 | TCODE |Transação SAP | _Transaction code_ de forma abreviada |
 | Service-Now |Sistema de serviços EDP | Sistema interno da EDP usado para gestão de ticket/chamados |
 
-## Quermesse?
+## Quermesse
 
 ### Visão geral
 O Quermesse atua como uma ponte entre o Service-Now e o time de BC. Quando um incidente é criado no Service-Now, o consultor funcional avalia se é necessário o envolvimento do time técnico. Caso positivo, o incidente é inserido no Quermesse, onde o BC pode gerenciar o fluxo de trabalho, desde a análise até a resolução.
@@ -120,9 +119,9 @@ flowchart LR
     C --> E[BC Analisa e Desenvolve]
     E --> F[Testes e Homologação]
     F --> G[Transporte para Produção]
-````
+```
 
-### Como funciona?
+### Como funciona
 
 Quermesse é um sistema criado e mantido pelo time de `BC` da **EDP JUMP GA** que tem como finalidade gerir os *Incidentes* que foram criados no sistema Service-Now e que exigem a atuação do time de `BC` para análises, melhorias e outros.
 
@@ -145,3 +144,14 @@ Para garantir que o fluxo ocorra como esperado, algumas regras devem ser seguida
 
 **--> TODO** Adicionar mais contexto ou exemplos práticos de como essas boas práticas são aplicadas.
 
+
+---
+
+### Boas práticas para atendimento de incidentes
+- **Inserção correta no Quermesse:** Antes de iniciar qualquer análise ou desenvolvimento, verifique se o INC foi corretamente inserido no Quermesse. Isso garante que o item seja rastreado e priorizado adequadamente.
+  - Exemplo: Um INC criado no Service-Now com o título "Erro na fatura XYZ" deve ser inserido no Quermesse com o mesmo título e com todos os campos obrigatórios preenchidos.
+- **Atualização de status:** Mantenha o status do INC atualizado conforme o progresso do atendimento. Isso permite que toda a equipe tenha visibilidade do andamento.
+  - Exemplo: Ao iniciar a análise técnica, altere o status para "Em Análise". Após a conclusão dos testes, atualize para "Aguardando Homologação".
+- **Resolução da Corretiva:** Descreva de forma clara e detalhada a solução aplicada no campo "Resolução da Corretiva". Isso facilita a revisão e a homologação pelo consultor funcional.
+  - Exemplo: "Corrigido erro na rotina de cálculo de impostos. Ajustada a tabela ZIMPOSTOS para incluir novos códigos fiscais."
+- **Fechamento do INC:** Após o transporte para produção, certifique-se de que o INC seja fechado no Quermesse. Isso encerra o ciclo de atendimento e evita duplicidade de esforços.
