@@ -54,13 +54,13 @@ flowchart TB
         direction LR
         D1[BC atualiza documento técnico]
         D2[Consultor Funcional cria documento EC]
-        D3[Documento EC aprovado?]
+        D3[Documento EC aprovado pelo Tech lead?]
     end
 
     subgraph E [Transporte para Produção]
         direction LR
         E1[BC prepara transporte]
-        E2[Tech Lead aprova correção]
+%%      E2[Tech Lead aprova correção]
         E3[Transporte para Produção]
     end
 
@@ -79,7 +79,8 @@ flowchart TB
     D3 -->|Sim| E1
     D3 -->|Não| B2
 
-    E1 --> E2 --> E3
+%%  E1 --> E2 --> E3
+    E1 --> E3
 ```
 
 ---
@@ -97,6 +98,8 @@ A **EDP JUMP GA** é uma área da EDP responsável pela gestão de ativos e proc
 | :--- | :---------- | :------------ |
 | AST | Asset | Abreviação para centralizador de âmbito evolutivo |
 | BC|Business Consulting | ~~Find Clarity in Chaos~~ ABAP, Desenvolvedor SAP, Consultor ABAP, SAP DEV|
+| CD | Change request | Documento de modificação criado no ChaRM |
+| ChaRM | Change Management | Componente do sistema SAP que gerencia e controla o processo de solicitações de mudança em um ambiente SAP |
 | DFCT | Corrective Change | Refere-se a mudanças corretivas aplicadas a um incidente já em andamento |
 | FF | Firefighter | Perfil para acesso em Ambiente Produtivo com finalidades de análise e processamento |
 | GA|Gestão de Ativos| Área responsável pela gestão de ativos na EDP |
@@ -107,8 +110,17 @@ A **EDP JUMP GA** é uma área da EDP responsável pela gestão de ativos e proc
 ## Quermesse?
 
 ### Visão geral
+O Quermesse atua como uma ponte entre o Service-Now e o time de BC. Quando um incidente é criado no Service-Now, o consultor funcional avalia se é necessário o envolvimento do time técnico. Caso positivo, o incidente é inserido no Quermesse, onde o BC pode gerenciar o fluxo de trabalho, desde a análise até a resolução.
 
-Itens criados no Service-Now para atendimento do time de Jump GA podem ou não ser adicionados no sistema Quermesse, dependendo da necessidade de apoio técnico. Após análise do recurso funcional (responsável por inserir o item na Quermesse), é definida a inclusão ou não.
+```mermaid
+flowchart LR
+    A[Service-Now] --> B{Necessita de BC?}
+    B -->|Sim| C[Quermesse]
+    B -->|Não| D[Resolvido pelo Funcional]
+    C --> E[BC Analisa e Desenvolve]
+    E --> F[Testes e Homologação]
+    F --> G[Transporte para Produção]
+````
 
 ### Como funciona?
 
