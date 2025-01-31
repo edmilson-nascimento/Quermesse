@@ -105,6 +105,9 @@ A **EDP JUMP GA** é uma área da EDP responsável pela gestão de ativos e proc
 | INC|Incidentes| Abreviação para centralizador de âmbito corretivo |
 | TCODE |Transação SAP | _Transaction code_ de forma abreviada |
 | Service-Now |Sistema de serviços EDP | Sistema interno da EDP usado para gestão de ticket/chamados |
+| K15 | Ambiente de Homologação | Ambiente SAP utilizado para testes e validações antes da liberação para produção. |
+| EC | Engineering Change | Documento técnico que descreve as mudanças realizadas para correção ou melhoria de um sistema. |
+| Tech Lead | Líder Técnico | Responsável por revisar e aprovar as correções antes do transporte para produção. |
 
 ## Quermesse
 
@@ -122,7 +125,6 @@ flowchart LR
 ```
 
 ### Como funciona
-
 Quermesse é um sistema criado e mantido pelo time de `BC` da **EDP JUMP GA** que tem como finalidade gerir os *Incidentes* que foram criados no sistema Service-Now e que exigem a atuação do time de `BC` para análises, melhorias e outros.
 
 **--> TODO** Incluir exemplo visual do sistema Quermesse ou expandir detalhes sobre como ele se integra ao Service-Now.
@@ -131,6 +133,14 @@ Quermesse é um sistema criado e mantido pelo time de `BC` da **EDP JUMP GA** qu
 
 Para acessar a solução, deve-se usar a tcode `ZCA_QUERMESSE_BC`. Uma transação (ou TCODE) é um código utilizado no sistema SAP para executar uma função ou acessar uma aplicação específica. No Quermesse, essa transação permite filtrar por Status, `BC` responsável, tickets abertos e outros. Por padrão, o filtro inicial lista itens sem `BC` atribuído e que estão em aberto, facilitando a identificação de demandas disponíveis.
 
+**Sugestão de texto:**
+> **Status de Incidentes:**
+> - **Aberto:** O INC foi criado no Service-Now e inserido no Quermesse, mas ainda não foi atribuído a um BC.
+> - **Em Análise:** O BC está analisando o problema e identificando a causa raiz.
+> - **Em Desenvolvimento:** O BC está implementando a solução técnica para o problema.
+> - **Aguardando Homologação:** A solução foi implementada e está aguardando testes e aprovação do consultor funcional.
+> - **Homologado:** A solução foi aprovada nos testes e está pronta para ser transportada para produção.
+> - **Fechado:** O INC foi resolvido e a solução foi aplicada com sucesso em produção.
 
 ## Boas práticas
 
@@ -155,3 +165,43 @@ Para garantir que o fluxo ocorra como esperado, algumas regras devem ser seguida
 - **Resolução da Corretiva:** Descreva de forma clara e detalhada a solução aplicada no campo "Resolução da Corretiva". Isso facilita a revisão e a homologação pelo consultor funcional.
   - Exemplo: "Corrigido erro na rotina de cálculo de impostos. Ajustada a tabela ZIMPOSTOS para incluir novos códigos fiscais."
 - **Fechamento do INC:** Após o transporte para produção, certifique-se de que o INC seja fechado no Quermesse. Isso encerra o ciclo de atendimento e evita duplicidade de esforços.
+
+2627848 - Internal error - value range of IXADRCOMC
+
+
+SAP Note/KBA
+Component
+
+2627848	Internal error - value range of IXADRCOMC
+594897	Inconsistency in table ADRCOMC	
+436119	Correction report for communication data inconsistencies	
+2436246	Error during the data exchange of communication data
+
+
+
+## Exemplos práticos
+**Sugestão de texto:**
+**Exemplo de atendimento de INC:**
+1. Um usuário identifica um erro no cálculo de impostos em uma fatura e abre um INC no Service-Now.
+2. O consultor funcional avalia o problema e insere o INC no Quermesse, atribuindo-o ao time de BC.
+3. O BC responsável analisa o problema, identifica um erro na tabela de impostos e realiza a correção.
+4. Após testes internos, a solução é enviada para homologação no ambiente K15.
+5. O consultor funcional valida a correção e aprova o transporte para produção.
+6. O BC prepara o transporte, que é revisado e aprovado pelo Tech Lead.
+7. A solução é aplicada em produção, e o INC é fechado no Quermesse.
+
+
+## Links e referências
+**Sugestão de texto:**
+**Referências úteis:**
+- [Manual do SAP para Desenvolvedores ABAP](#)
+- [Guia de Boas Práticas para Atendimento de Incidentes](#)
+- [Tutorial: Como usar a transação ZCA_QUERMESSE_BC](#)
+
+## Revisão visual
+**Sugestão de texto:**
+**Melhorias visuais:**
+- Use **negrito** para termos importantes.
+- Utilize listas numeradas ou com marcadores para etapas sequenciais.
+- Inclua espaçamento adequado entre seções.
+- Adicione títulos e subtítulos claros para organizar o conteúdo.
