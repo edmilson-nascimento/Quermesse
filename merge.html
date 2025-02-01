@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>merge.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="quermesse">Quermesse</h1>
+<p><img src="https://img.shields.io/badge/development-abap-blue" alt="Static Badge">
+<img src="https://img.shields.io/gitlab/commit-activity/t/https://roff-git.ddns.net/roff/edp/edp-jump" alt="GitHub commit activity (branch)">
+<img src="https://img.shields.io/badge/miriam_batista-abap-red" alt="Static Badge">
+<img src="https://img.shields.io/badge/alexandra_espada-abap-pink" alt="Static Badge"></p>
+<blockquote>
+<p>🗘 Este documento, assim como o negócio, está em constante fase de melhoria e adaptação.</p>
+</blockquote>
+<hr>
+<h2 id="menu">Menu</h2>
+<ol>
+<li><a href="#introdu%C3%A7%C3%A3o">Introdução</a></li>
+<li><a href="#gloss%C3%A1rio">Glossário</a></li>
+<li><a href="#o-que-%C3%A9-quermesse">O que é Quermesse?</a>
+<ul>
+<li><a href="#vis%C3%A3o-geral">Visão geral</a></li>
+<li><a href="#como-funciona">Como funciona?</a></li>
+<li><a href="#transa%C3%A7%C3%A3o-e-filtro">Transação e filtro</a></li>
+<li><a href="#status-de-incidentes">Status de Incidentes</a></li>
+</ul>
+</li>
+<li><a href="#boas-pr%C3%A1ticas">Boas práticas</a></li>
+<li><a href="#fluxo-completo">Fluxo Completo</a></li>
+<li><a href="#fluxo-de-trabalho">Fluxo de Trabalho</a>
+<ul>
+<li><a href="#abertura-de-incidente">Abertura de Incidente</a></li>
+<li><a href="#atendimento-bc">Atendimento BC</a></li>
+<li><a href="#transporte-para-produ%C3%A7%C3%A3o">Transporte para Produção</a></li>
+</ul>
+</li>
+<li><a href="#exemplos-pr%C3%A1ticos">Exemplos práticos</a>
+<ul>
+<li><a href="#exemplo-de-atendimento-de-inc">Exemplo de atendimento de INC</a></li>
+</ul>
+</li>
+<li><a href="#perguntas-frequentes-faq">Perguntas Frequentes (FAQ)</a></li>
+<li><a href="#links-e-refer%C3%AAncias">Links e referências</a></li>
+</ol>
+<hr>
+<h2 id="introdu%C3%A7%C3%A3o">Introdução</h2>
+<p>A <strong>EDP JUMP GA</strong> é uma área da EDP responsável pela gestão de ativos e processos relacionados ao setor elétrico. O time de <strong>Business Consulting (BC)</strong> atua no desenvolvimento e manutenção de soluções SAP para suportar as operações da empresa, garantindo eficiência e conformidade com os padrões técnicos e regulatórios. Este documento tem como objetivo fornecer uma visão geral dos processos, ferramentas e boas práticas utilizados pelo time de BC no atendimento de incidentes relacionados ao SAP, com foco no sistema <strong>Quermesse</strong>.</p>
+<hr>
+<h2 id="gloss%C3%A1rio">Glossário</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Sigla</th>
+<th style="text-align:left">Significado</th>
+<th style="text-align:left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">AST</td>
+<td style="text-align:left">Asset</td>
+<td style="text-align:left">Abreviação para centralizador de âmbito evolutivo</td>
+</tr>
+<tr>
+<td style="text-align:left">BC</td>
+<td style="text-align:left">Business Consulting</td>
+<td style="text-align:left">ABAP, Desenvolvedor SAP, Consultor ABAP, SAP DEV</td>
+</tr>
+<tr>
+<td style="text-align:left">CD</td>
+<td style="text-align:left">Change Request</td>
+<td style="text-align:left">Documento de modificação criado no ChaRM</td>
+</tr>
+<tr>
+<td style="text-align:left">ChaRM</td>
+<td style="text-align:left">Change Management</td>
+<td style="text-align:left">Componente do sistema SAP que gerencia e controla o processo de solicitações de mudança em um ambiente SAP</td>
+</tr>
+<tr>
+<td style="text-align:left">DFCT</td>
+<td style="text-align:left">Corrective Change</td>
+<td style="text-align:left">Refere-se a mudanças corretivas aplicadas a um incidente já em andamento</td>
+</tr>
+<tr>
+<td style="text-align:left">FF</td>
+<td style="text-align:left">Firefighter</td>
+<td style="text-align:left">Perfil para acesso em Ambiente Produtivo com finalidades de análise e processamento</td>
+</tr>
+<tr>
+<td style="text-align:left">GA</td>
+<td style="text-align:left">Gestão de Ativos</td>
+<td style="text-align:left">Área responsável pela gestão de ativos na EDP</td>
+</tr>
+<tr>
+<td style="text-align:left">INC</td>
+<td style="text-align:left">Incidentes</td>
+<td style="text-align:left">Abreviação para centralizador de âmbito corretivo</td>
+</tr>
+<tr>
+<td style="text-align:left">TCODE</td>
+<td style="text-align:left">Transação SAP</td>
+<td style="text-align:left"><em>Transaction code</em> de forma abreviada</td>
+</tr>
+<tr>
+<td style="text-align:left">Service-Now</td>
+<td style="text-align:left">Sistema de serviços EDP</td>
+<td style="text-align:left">Sistema interno da EDP usado para gestão de ticket/chamados</td>
+</tr>
+<tr>
+<td style="text-align:left">K15</td>
+<td style="text-align:left">Ambiente de Homologação</td>
+<td style="text-align:left">Ambiente SAP utilizado para testes e validações antes da liberação para produção</td>
+</tr>
+<tr>
+<td style="text-align:left">EC</td>
+<td style="text-align:left">Engineering Change</td>
+<td style="text-align:left">Documento técnico que descreve as mudanças realizadas para correção ou melhoria de um sistema</td>
+</tr>
+<tr>
+<td style="text-align:left">Tech Lead</td>
+<td style="text-align:left">Líder Técnico</td>
+<td style="text-align:left">Responsável por revisar e aprovar as correções antes do transporte para produção</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="o-que-%C3%A9-quermesse">O que é Quermesse?</h2>
+<h3 id="vis%C3%A3o-geral">Visão Geral</h3>
+<p>O Quermesse é um sistema criado pelo time de <strong>Business Consulting (BC)</strong> da <strong>EDP JUMP GA</strong> para gerenciar incidentes que exigem intervenção técnica. Ele atua como uma ponte entre o <strong>Service-Now</strong> e o time de BC, garantindo que os problemas sejam resolvidos de forma eficiente e rastreável.</p>
+<h3 id="como-funciona">Como Funciona?</h3>
+<ol>
+<li>Um incidente é criado no <strong>Service-Now</strong>.</li>
+<li>O consultor funcional avalia se é necessário o envolvimento do BC.</li>
+<li>Caso positivo, o incidente é inserido no <strong>Quermesse</strong>.</li>
+<li>O BC assume o incidente, realiza a análise e desenvolve a solução.</li>
+<li>Após testes e homologação, a solução é transportada para produção.</li>
+</ol>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart LR
+    A[Service-Now] --> B{Necessita de BC?}
+    B -->|Sim| C[Quermesse]
+    B -->|Não| D[Resolvido pelo Funcional]
+    C --> E[BC Analisa e Desenvolve]
+    E --> F[Testes e Homologação]
+    F --> G[Transporte para Produção]
+</div></code></pre>
+<h3 id="transa%C3%A7%C3%A3o-e-filtro">Transação e Filtro</h3>
+<p>Para acessar a solução, deve-se usar a transação ZCA_QUERMESSE_BC. Essa transação permite filtrar por:</p>
+<ul>
+<li>Status do INC</li>
+<li>BC responsável</li>
+<li>Tickets abertos</li>
+</ul>
+<p>Por padrão, o filtro inicial lista itens sem BC atribuído e que estão em aberto, facilitando a identificação de demandas disponíveis.</p>
+<h3 id="status-de-incidentes">Status de Incidentes</h3>
+<ul>
+<li>Aberto: O INC foi criado no Service-Now e inserido no Quermesse, mas ainda não foi atribuído a um BC.</li>
+<li>Em Análise: O BC está analisando o problema e identificando a causa raiz.</li>
+<li>Em Desenvolvimento: O BC está implementando a solução técnica para o problema.</li>
+<li>Aguardando Homologação: A solução foi implementada e está aguardando testes e aprovação do consultor funcional.</li>
+<li>Homologado: A solução foi aprovada nos testes e está pronta para ser transportada para produção.</li>
+<li>Fechado: O INC foi resolvido e a solução foi aplicada com sucesso em produção.</li>
+</ul>
+<h2 id="boas-pr%C3%A1ticas">Boas Práticas</h2>
+<p>Checklist para Abertura de Incidente</p>
+<ul>
+<li>Descreva o problema de forma clara e detalhada.</li>
+<li>Inclua o número do ticket do Service-Now.</li>
+<li>Especifique o ambiente afetado (ex.: K15, Produção).</li>
+<li>Adicione passos para reproduzir o problema.</li>
+<li>Defina o cenário atual e o cenário esperado.</li>
+</ul>
+<p>Atualização de Status</p>
+<ul>
+<li>O que fazer: Mantenha o status do INC atualizado conforme o progresso.</li>
+<li>Exemplo: Ao iniciar a análise, altere o status para &quot;Em Análise&quot;. Após os testes, atualize para &quot;Aguardando Homologação&quot;.</li>
+</ul>
+<p>Fechamento de INC</p>
+<ul>
+<li>O que fazer: Feche o INC após a aplicação da solução em produção.</li>
+<li>Exemplo: Após o transporte para produção, atualize o status para &quot;Fechado&quot; e adicione um comentário confirmando a resolução.</li>
+</ul>
+<h2 id="fluxo-completo">Fluxo Completo</h2>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TB
+    subgraph A [Abertura de Incidente]
+        direction LR
+        A1[Usuário identifica problema]
+        A2[Consultor Funcional registra incidente no Service-Now]
+        A3[Consultor Funcional insere no Quermesse]
+    end
+
+    subgraph B [Atendimento pelo BC]
+        direction LR
+        B1[BC recebe incidente]
+        B2[BC realiza análise técnica]
+        B3[BC realiza ajustes necessários]
+        B4[BC realiza testes internos]
+        B5[Testes internos bem-sucedidos?]
+    end
+
+    subgraph C [Testes e Homologação]
+        direction LR
+        C1[Consultor Funcional realiza testes no K15]
+        C2[Testes aprovados?]
+    end
+
+    subgraph D [Criação de Documento EC]
+        direction LR
+        D1[BC atualiza documento técnico]
+        D2[Consultor Funcional cria documento EC]
+        D3[Documento EC aprovado pelo Tech lead?]
+    end
+
+    subgraph E [Transporte para Produção]
+        direction LR
+        E1[BC prepara transporte]
+        E3[Transporte para Produção]
+    end
+
+    A1 --> A2 --> A3
+    A3 --> B1
+
+    B1 --> B2 --> B3 --> B4 --> B5
+    B5 -->|Sim| C1
+    B5 -->|Não| B2
+
+    C1 --> C2
+    C2 -->|Sim| D1
+    C2 -->|Não| B2
+
+    D1 --> D2 --> D3
+    D3 -->|Sim| E1
+    D3 -->|Não| B2
+
+    E1 --> E3 
+</div></code></pre>
+<h2 id="fluxo-de-trabalho">Fluxo de Trabalho</h2>
+<h3 id="abertura-de-incidente">Abertura de Incidente</h3>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD;
+  Begin((" ")):::startClass --> A[Consultor Funcional identifica problema] -->|Registra incidente| B[Quermesse]
+  B -->|Consultor Funcional analisa| C[Ajuste do problema]
+  C -->|Cenário e passos de reprodução| D[Incidente disponível para BC] --> End(((" "))):::endClass
+</div></code></pre>
+<h3 id="atendimento-bc">Atendimento BC</h3>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD;
+  Begin((" ")):::startClass --> A[BC recebe incidente] -->|Analisa e faz ajustes| B[Testes internos]
+  B -->|Passa para Consultor Funcional| C[Testes no ambiente K15]
+  C -->|Teste falhou?| D{" "}
+  D -->|Sim| A
+  D -->|Não| E[Criar documento EC] --> End(((" "))):::endClass
+</div></code></pre>
+<h3 id="transporte-para-produ%C3%A7%C3%A3o">Transporte para Produção</h3>
+<pre><code class="language-mermaid"><div class="mermaid">graph TD;
+  Begin((" ")):::startClass --> A[EC criada por Consultor Funcional] -->|BC atualiza detalhes técnicos| B[Revisão do TL]
+  B -->|Aprovado?| C{" "}
+  C -->|Não| A
+  C -->|Sim| D[BC prepara transporte]
+  D -->|Versão transportada para produção| End(((" "))):::endClass
+</div></code></pre>
+<h1 id="exemplos-pr%C3%A1ticos">Exemplos Práticos</h1>
+<h2 id="exemplo-de-atendimento-de-inc">Exemplo de Atendimento de INC</h2>
+<ol>
+<li>Um usuário identifica um erro no cálculo de impostos em uma fatura e abre um INC no Service-Now.</li>
+<li>O consultor funcional avalia o problema e insere o INC no Quermesse, atribuindo-o ao time de BC.</li>
+<li>O BC responsável analisa o problema, identifica um erro na tabela de impostos e realiza a correção.</li>
+<li>Após testes internos, a solução é enviada para homologação no ambiente K15.</li>
+<li>O consultor funcional valida a correção e aprova o transporte para produção.</li>
+<li>O BC prepara o transporte, que é revisado e aprovado pelo Tech Lead.</li>
+<li>A solução é aplicada em produção, e o INC é fechado no Quermesse.</li>
+</ol>
+<h1 id="perguntas-frequentes-faq">Perguntas Frequentes (FAQ)</h1>
+<h2 id="o-que-fazer-se-o-teste-falhar">O que fazer se o teste falhar?</h2>
+<p>Se os testes internos ou de homologação falharem, o BC deve revisar a solução, corrigir os problemas identificados e repetir o processo de testes.</p>
+<h2 id="como-priorizar-incidentes">Como priorizar incidentes?</h2>
+<p>Os incidentes são priorizados com base na urgência e no tempo de abertura. O algoritmo da Quermesse define automaticamente a ordem de atendimento.</p>
+<h1 id="links-e-refer%C3%AAncias">Links e Referências</h1>
+<ul>
+<li>Manual do SAP para Desenvolvedores ABAP</li>
+<li>Guia de Boas Práticas para Atendimento de Incidentes</li>
+<li>Tutorial: Como usar a transação ZCA_QUERMESSE_BC</li>
+<li><a href="https://roff-git.ddns.net/roff/edp/edp-jump">Repositório GitLab</a></li>
+</ul>
+
+</body>
+</html>

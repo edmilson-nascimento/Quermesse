@@ -1,11 +1,13 @@
 # Quermesse
 
 ![Static Badge](https://img.shields.io/badge/development-abap-blue)
-![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/edmilson-nascimento/quermesse)
+![GitHub commit activity (branch)](https://img.shields.io/gitlab/commit-activity/t/https://roff-git.ddns.net/roff/edp/edp-jump)
 ![Static Badge](https://img.shields.io/badge/miriam_batista-abap-red)
 ![Static Badge](https://img.shields.io/badge/alexandra_espada-abap-pink)
 
 > 🗘 Este documento, assim como o negócio, está em constante fase de melhoria e adaptação.
+
+---
 
 ## Menu
 1. [Introdução](#introdução)
@@ -14,19 +16,105 @@
    - [Visão geral](#visão-geral)
    - [Como funciona?](#como-funciona)
    - [Transação e filtro](#transação-e-filtro)
-4. [Boas práticas](#boas-práticas)
-5. [Atividades iniciais](#atividades-iniciais)
-6. [Fluxo Completo](#fluxo-completo)
-7. [Fluxo de atendimento por Status](#fluxo-de-atendimento-por-status)
    - [Status de Incidentes](#status-de-incidentes)
-   - [Diagrama de fluxo](#diagrama-de-fluxo)
+4. [Boas práticas](#boas-práticas)
+5. [Fluxo Completo](#fluxo-completo)
+6. [Fluxo de Trabalho](#fluxo-de-trabalho)
+   - [Abertura de Incidente](#abertura-de-incidente)
+   - [Atendimento BC](#atendimento-bc)
+   - [Transporte para Produção](#transporte-para-produção)
+7. [Exemplos práticos](#exemplos-práticos)
+   - [Exemplo de atendimento de INC](#exemplo-de-atendimento-de-inc)
+8. [Perguntas Frequentes (FAQ)](#perguntas-frequentes-faq)
+9. [Links e referências](#links-e-referências)
 
+---
+
+## Introdução
+
+A **EDP JUMP GA** é uma área da EDP responsável pela gestão de ativos e processos relacionados ao setor elétrico. O time de **Business Consulting (BC)** atua no desenvolvimento e manutenção de soluções SAP para suportar as operações da empresa, garantindo eficiência e conformidade com os padrões técnicos e regulatórios. Este documento tem como objetivo fornecer uma visão geral dos processos, ferramentas e boas práticas utilizados pelo time de BC no atendimento de incidentes relacionados ao SAP, com foco no sistema **Quermesse**.
+
+---
+
+## Glossário
+
+| Sigla | Significado | Descrição |
+| :--- | :---------- | :------------ |
+| AST | Asset | Abreviação para centralizador de âmbito evolutivo |
+| BC | Business Consulting | ABAP, Desenvolvedor SAP, Consultor ABAP, SAP DEV |
+| CD | Change Request | Documento de modificação criado no ChaRM |
+| ChaRM | Change Management | Componente do sistema SAP que gerencia e controla o processo de solicitações de mudança em um ambiente SAP |
+| DFCT | Corrective Change | Refere-se a mudanças corretivas aplicadas a um incidente já em andamento |
+| FF | Firefighter | Perfil para acesso em Ambiente Produtivo com finalidades de análise e processamento |
+| GA | Gestão de Ativos | Área responsável pela gestão de ativos na EDP |
+| INC | Incidentes | Abreviação para centralizador de âmbito corretivo |
+| TCODE | Transação SAP | _Transaction code_ de forma abreviada |
+| Service-Now | Sistema de serviços EDP | Sistema interno da EDP usado para gestão de ticket/chamados |
+| K15 | Ambiente de Homologação | Ambiente SAP utilizado para testes e validações antes da liberação para produção |
+| EC | Engineering Change | Documento técnico que descreve as mudanças realizadas para correção ou melhoria de um sistema |
+| Tech Lead | Líder Técnico | Responsável por revisar e aprovar as correções antes do transporte para produção |
+
+---
+
+## O que é Quermesse?
+
+### Visão Geral
+O Quermesse é um sistema criado pelo time de **Business Consulting (BC)** da **EDP JUMP GA** para gerenciar incidentes que exigem intervenção técnica. Ele atua como uma ponte entre o **Service-Now** e o time de BC, garantindo que os problemas sejam resolvidos de forma eficiente e rastreável.
+
+### Como Funciona?
+1. Um incidente é criado no **Service-Now**.
+2. O consultor funcional avalia se é necessário o envolvimento do BC.
+3. Caso positivo, o incidente é inserido no **Quermesse**.
+4. O BC assume o incidente, realiza a análise e desenvolve a solução.
+5. Após testes e homologação, a solução é transportada para produção.
+
+```mermaid
+flowchart LR
+    A[Service-Now] --> B{Necessita de BC?}
+    B -->|Sim| C[Quermesse]
+    B -->|Não| D[Resolvido pelo Funcional]
+    C --> E[BC Analisa e Desenvolve]
+    E --> F[Testes e Homologação]
+    F --> G[Transporte para Produção]
+```
+
+### Transação e Filtro
+Para acessar a solução, deve-se usar a transação ZCA_QUERMESSE_BC. Essa transação permite filtrar por:
+
+- Status do INC
+- BC responsável
+- Tickets abertos
+
+Por padrão, o filtro inicial lista itens sem BC atribuído e que estão em aberto, facilitando a identificação de demandas disponíveis.
+
+### Status de Incidentes
+- Aberto: O INC foi criado no Service-Now e inserido no Quermesse, mas ainda não foi atribuído a um BC.
+- Em Análise: O BC está analisando o problema e identificando a causa raiz.
+- Em Desenvolvimento: O BC está implementando a solução técnica para o problema.
+- Aguardando Homologação: A solução foi implementada e está aguardando testes e aprovação do consultor funcional.
+- Homologado: A solução foi aprovada nos testes e está pronta para ser transportada para produção.
+- Fechado: O INC foi resolvido e a solução foi aplicada com sucesso em produção.
+
+## Boas Práticas
+Checklist para Abertura de Incidente
+- Descreva o problema de forma clara e detalhada.
+- Inclua o número do ticket do Service-Now.
+- Especifique o ambiente afetado (ex.: K15, Produção).
+- Adicione passos para reproduzir o problema.
+- Defina o cenário atual e o cenário esperado.
+
+Atualização de Status
+- O que fazer: Mantenha o status do INC atualizado conforme o progresso.
+- Exemplo: Ao iniciar a análise, altere o status para "Em Análise". Após os testes, atualize para "Aguardando Homologação".
+
+Fechamento de INC
+- O que fazer: Feche o INC após a aplicação da solução em produção.
+- Exemplo: Após o transporte para produção, atualize o status para "Fechado" e adicione um comentário confirmando a resolução.
 
 ## Fluxo Completo
 
-```mermaid
+```mermaid 
 flowchart TB
-
     subgraph A [Abertura de Incidente]
         direction LR
         A1[Usuário identifica problema]
@@ -59,7 +147,6 @@ flowchart TB
     subgraph E [Transporte para Produção]
         direction LR
         E1[BC prepara transporte]
-%%      E2[Tech Lead aprova correção]
         E3[Transporte para Produção]
     end
 
@@ -78,98 +165,41 @@ flowchart TB
     D3 -->|Sim| E1
     D3 -->|Não| B2
 
-%%  E1 --> E2 --> E3
-    E1 --> E3
+    E1 --> E3 
 ```
 
----
+## Fluxo de Trabalho
 
-## Introdução
-
-A **EDP JUMP GA** é uma área da EDP responsável pela gestão de ativos e processos relacionados ao setor elétrico. O time de **Business Consulting (BC)** atua no desenvolvimento e manutenção de soluções SAP para suportar as operações da empresa, garantindo eficiência e conformidade com os padrões técnicos e regulatórios.
-
-
-## Glossário
-
-É bem comum a utilização de siglas e aqui temos algumas para facilitar o entendimento dos processos/fluxos que são abordados para atendimentos de INC. A descrição abaixo é uma representação particular do cenário abordado e não contempla os termos de forma abrangente e/ou aplicada em outros cenários / times / escopos.
-
-| Sigla | Significado | Descrição |
-| :--- | :---------- | :------------ |
-| AST | Asset | Abreviação para centralizador de âmbito evolutivo |
-| BC|Business Consulting | ~~Find Clarity in Chaos~~ ABAP, Desenvolvedor SAP, Consultor ABAP, SAP DEV|
-| CD | Change request | Documento de modificação criado no ChaRM |
-| ChaRM | Change Management | Componente do sistema SAP que gerencia e controla o processo de solicitações de mudança em um ambiente SAP |
-| DFCT | Corrective Change | Refere-se a mudanças corretivas aplicadas a um incidente já em andamento |
-| FF | Firefighter | Perfil para acesso em Ambiente Produtivo com finalidades de análise e processamento |
-| GA|Gestão de Ativos| Área responsável pela gestão de ativos na EDP |
-| INC|Incidentes| Abreviação para centralizador de âmbito corretivo |
-| TCODE |Transação SAP | _Transaction code_ de forma abreviada |
-| Service-Now |Sistema de serviços EDP | Sistema interno da EDP usado para gestão de ticket/chamados |
-| K15 | Ambiente de Homologação | Ambiente SAP utilizado para testes e validações antes da liberação para produção. |
-| EC | Engineering Change | Documento técnico que descreve as mudanças realizadas para correção ou melhoria de um sistema. |
-| Tech Lead | Líder Técnico | Responsável por revisar e aprovar as correções antes do transporte para produção. |
-
-## Quermesse
-
-### Visão geral
-O Quermesse atua como uma ponte entre o Service-Now e o time de BC. Quando um incidente é criado no Service-Now, o consultor funcional avalia se é necessário o envolvimento do time técnico. Caso positivo, o incidente é inserido no Quermesse, onde o BC pode gerenciar o fluxo de trabalho, desde a análise até a resolução.
-
+### Abertura de Incidente
 ```mermaid
-flowchart LR
-    A[Service-Now] --> B{Necessita de BC?}
-    B -->|Sim| C[Quermesse]
-    B -->|Não| D[Resolvido pelo Funcional]
-    C --> E[BC Analisa e Desenvolve]
-    E --> F[Testes e Homologação]
-    F --> G[Transporte para Produção]
-```
+graph TD;
+  Begin((" ")):::startClass --> A[Consultor Funcional identifica problema] -->|Registra incidente| B[Quermesse]
+  B -->|Consultor Funcional analisa| C[Ajuste do problema]
+  C -->|Cenário e passos de reprodução| D[Incidente disponível para BC] --> End(((" "))):::endClass
+``` 
 
-### Como funciona
-Quermesse é um sistema criado e mantido pelo time de `BC` da **EDP JUMP GA** que tem como finalidade gerir os *Incidentes* que foram criados no sistema Service-Now e que exigem a atuação do time de `BC` para análises, melhorias e outros.
+### Atendimento BC
+```mermaid
+graph TD;
+  Begin((" ")):::startClass --> A[BC recebe incidente] -->|Analisa e faz ajustes| B[Testes internos]
+  B -->|Passa para Consultor Funcional| C[Testes no ambiente K15]
+  C -->|Teste falhou?| D{" "}
+  D -->|Sim| A
+  D -->|Não| E[Criar documento EC] --> End(((" "))):::endClass
+``` 
 
-**--> TODO** Incluir exemplo visual do sistema Quermesse ou expandir detalhes sobre como ele se integra ao Service-Now.
+### Transporte para Produção
+```mermaid
+graph TD;
+  Begin((" ")):::startClass --> A[EC criada por Consultor Funcional] -->|BC atualiza detalhes técnicos| B[Revisão do TL]
+  B -->|Aprovado?| C{" "}
+  C -->|Não| A
+  C -->|Sim| D[BC prepara transporte]
+  D -->|Versão transportada para produção| End(((" "))):::endClass
+``` 
 
-### Transação e filtro
-
-Para acessar a solução, deve-se usar a tcode `ZCA_QUERMESSE_BC`. Uma transação (ou TCODE) é um código utilizado no sistema SAP para executar uma função ou acessar uma aplicação específica. No Quermesse, essa transação permite filtrar por Status, `BC` responsável, tickets abertos e outros. Por padrão, o filtro inicial lista itens sem `BC` atribuído e que estão em aberto, facilitando a identificação de demandas disponíveis.
-
-**Sugestão de texto:**
-> **Status de Incidentes:**
-> - **Aberto:** O INC foi criado no Service-Now e inserido no Quermesse, mas ainda não foi atribuído a um BC.
-> - **Em Análise:** O BC está analisando o problema e identificando a causa raiz.
-> - **Em Desenvolvimento:** O BC está implementando a solução técnica para o problema.
-> - **Aguardando Homologação:** A solução foi implementada e está aguardando testes e aprovação do consultor funcional.
-> - **Homologado:** A solução foi aprovada nos testes e está pronta para ser transportada para produção.
-> - **Fechado:** O INC foi resolvido e a solução foi aplicada com sucesso em produção.
-
-## Boas práticas
-
-Para garantir que o fluxo ocorra como esperado, algumas regras devem ser seguidas durante os atendimentos:
-
-- INC deve estar corretamente inserido na Quermesse antes do início de desenvolvimento/análise
-- O recurso funcional insere o INC na Quermesse e o recurso `BC` deve atualizá-lo
-- O status do INC deve ser atualizado conforme a evolução do atendimento
-- O campo Resolução da Corretiva deve ser atualizado conforme a solução avança (análise/testes/etc.)
-- Após o ajuste ser transportado para o _Ambiente de Produção_, o item deve ser fechado na Quermesse
-
-**--> TODO** Adicionar mais contexto ou exemplos práticos de como essas boas práticas são aplicadas.
-
-
----
-
-### Boas práticas para atendimento de incidentes
-- **Inserção correta no Quermesse:** Antes de iniciar qualquer análise ou desenvolvimento, verifique se o INC foi corretamente inserido no Quermesse. Isso garante que o item seja rastreado e priorizado adequadamente.
-  - Exemplo: Um INC criado no Service-Now com o título "Erro na fatura XYZ" deve ser inserido no Quermesse com o mesmo título e com todos os campos obrigatórios preenchidos.
-- **Atualização de status:** Mantenha o status do INC atualizado conforme o progresso do atendimento. Isso permite que toda a equipe tenha visibilidade do andamento.
-  - Exemplo: Ao iniciar a análise técnica, altere o status para "Em Análise". Após a conclusão dos testes, atualize para "Aguardando Homologação".
-- **Resolução da Corretiva:** Descreva de forma clara e detalhada a solução aplicada no campo "Resolução da Corretiva". Isso facilita a revisão e a homologação pelo consultor funcional.
-  - Exemplo: "Corrigido erro na rotina de cálculo de impostos. Ajustada a tabela ZIMPOSTOS para incluir novos códigos fiscais."
-- **Fechamento do INC:** Após o transporte para produção, certifique-se de que o INC seja fechado no Quermesse. Isso encerra o ciclo de atendimento e evita duplicidade de esforços.
-
-
-## Exemplos práticos
-**Sugestão de texto:**
-**Exemplo de atendimento de INC:**
+# Exemplos Práticos
+## Exemplo de Atendimento de INC
 1. Um usuário identifica um erro no cálculo de impostos em uma fatura e abre um INC no Service-Now.
 2. O consultor funcional avalia o problema e insere o INC no Quermesse, atribuindo-o ao time de BC.
 3. O BC responsável analisa o problema, identifica um erro na tabela de impostos e realiza a correção.
@@ -178,18 +208,15 @@ Para garantir que o fluxo ocorra como esperado, algumas regras devem ser seguida
 6. O BC prepara o transporte, que é revisado e aprovado pelo Tech Lead.
 7. A solução é aplicada em produção, e o INC é fechado no Quermesse.
 
+# Perguntas Frequentes (FAQ)
+## O que fazer se o teste falhar?
+Se os testes internos ou de homologação falharem, o BC deve revisar a solução, corrigir os problemas identificados e repetir o processo de testes.
 
-## Links e referências
-**Sugestão de texto:**
-**Referências úteis:**
-- [Manual do SAP para Desenvolvedores ABAP](#)
-- [Guia de Boas Práticas para Atendimento de Incidentes](#)
-- [Tutorial: Como usar a transação ZCA_QUERMESSE_BC](#)
+## Como priorizar incidentes?
+Os incidentes são priorizados com base na urgência e no tempo de abertura. O algoritmo da Quermesse define automaticamente a ordem de atendimento.
 
-## Revisão visual
-**Sugestão de texto:**
-**Melhorias visuais:**
-- Use **negrito** para termos importantes.
-- Utilize listas numeradas ou com marcadores para etapas sequenciais.
-- Inclua espaçamento adequado entre seções.
-- Adicione títulos e subtítulos claros para organizar o conteúdo.
+# Links e Referências
+- Manual do SAP para Desenvolvedores ABAP
+- Guia de Boas Práticas para Atendimento de Incidentes
+- Tutorial: Como usar a transação ZCA_QUERMESSE_BC
+- [Repositório GitLab](https://roff-git.ddns.net/roff/edp/edp-jump)
